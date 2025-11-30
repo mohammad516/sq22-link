@@ -40,11 +40,11 @@ export default function ClientsCarousel() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-gradient-to-r from-[#252A34] via-[#08D9D6] to-[#252A34] bg-clip-text text-transparent animate-gradient">
+            <span className="bg-gradient-to-r from-[#171717] via-[#DA0037] to-[#171717] bg-clip-text text-transparent animate-gradient">
               Our Clients
             </span>
             <motion.div
-              className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#08D9D6] to-transparent"
+              className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#DA0037] to-transparent"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}

@@ -40,7 +40,7 @@ export default function AboutPreviewSection() {
   return (
     <motion.section
       ref={ref}
-      className="py-20 md:py-24 lg:py-28 bg-gradient-to-br from-[#EAEAEA] via-[#F9FAFB] to-[#08D9D6]/20 relative overflow-hidden"
+      className="py-20 md:py-24 lg:py-28 bg-gradient-to-br from-[#EAEAEA] via-[#F9FAFB] to-[#DA0037]/20 relative overflow-hidden"
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -99,7 +99,7 @@ export default function AboutPreviewSection() {
               transition={fadeInRight.transition}
             >
               <motion.p
-                className="text-sm font-bold uppercase tracking-wider text-[#08D9D6] mb-4"
+                className="text-sm font-bold uppercase tracking-wider text-[#DA0037] mb-4"
                 initial={fadeInUp.initial}
                 animate={fadeInUp.animate}
                 transition={fadeInUp.transition}
@@ -108,7 +108,7 @@ export default function AboutPreviewSection() {
               </motion.p>
 
               <motion.h2
-                className="text-4xl md:text-5xl font-bold text-[#252A34] mb-6 font-serif tracking-wide leading-[1.1]"
+                className="text-4xl md:text-5xl font-bold text-[#171717] mb-6 font-serif tracking-wide leading-[1.1]"
                 initial={fadeInUp.initial}
                 animate={fadeInUp.animate}
                 transition={fadeInUp.transition}
@@ -117,7 +117,7 @@ export default function AboutPreviewSection() {
               </motion.h2>
 
               <motion.div
-                className="w-16 h-[1px] bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] mb-8"
+                className="w-16 h-[1px] bg-gradient-to-r from-[#DA0037] to-[#FF2E63] mb-8"
                 initial={fadeInUp.initial}
                 animate={fadeInUp.animate}
                 transition={fadeInUp.transition}
@@ -129,13 +129,13 @@ export default function AboutPreviewSection() {
                 animate={fadeInUp.animate}
                 transition={fadeInUp.transition}
               >
-                <p className="text-[#252A34]/90 text-lg md:text-xl leading-relaxed font-sans">
-                  At <span className="font-semibold text-[#08D9D6]">Revive</span>, we combine cutting-edge medical care with a holistic wellness philosophy to help you look and feel your best from the inside out.
+                <p className="text-[#171717]/90 text-lg md:text-xl leading-relaxed font-sans">
+                  At <span className="font-semibold text-[#DA0037]">Revive</span>, we combine cutting-edge medical care with a holistic wellness philosophy to help you look and feel your best from the inside out.
                 </p>
-                <p className="text-[#252A34]/90 text-lg md:text-xl leading-relaxed font-sans">
+                <p className="text-[#171717]/90 text-lg md:text-xl leading-relaxed font-sans">
                   Our goal is to support your journey toward optimal health, vitality, and confidence — with compassion and excellence.
                 </p>
-                <blockquote className="border-l-4 border-[#08D9D6] pl-4 italic text-[#252A34]/80 text-lg">
+                <blockquote className="border-l-4 border-[#DA0037] pl-4 italic text-[#171717]/80 text-lg">
                   &ldquo;We believe in total wellness — physical, emotional, and cellular.&rdquo;
                 </blockquote>
               </motion.div>
@@ -149,12 +149,12 @@ export default function AboutPreviewSection() {
                 {values.map((value, index) => (
                   <motion.li
                     key={value}
-                    className="flex items-center text-[#252A34]/90 text-lg font-sans"
+                    className="flex items-center text-[#171717]/90 text-lg font-sans"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.15 }}
                   >
-                    <div className="flex items-center justify-center w-6 h-6 bg-gradient-to-br from-[#08D9D6] to-[#FF2E63] rounded-full mr-4 flex-shrink-0 shadow-sm">
+                    <div className="flex items-center justify-center w-6 h-6 bg-gradient-to-br from-[#DA0037] to-[#FF2E63] rounded-full mr-4 flex-shrink-0 shadow-sm">
                       <Check size={14} className="text-white" />
                     </div>
                     {value}
@@ -169,7 +169,7 @@ export default function AboutPreviewSection() {
               >
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] px-12 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgb(8,217,214,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] hover:from-[#FF2E63] hover:to-[#08D9D6] hover:ring-2 hover:ring-[#08D9D6]/30 hover:ring-offset-2"
+                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#DA0037] to-[#FF2E63] px-12 py-4 text-base font-semibold text-white shadow-[0_8px_30px_rgb(8,217,214,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] hover:from-[#FF2E63] hover:to-[#DA0037] hover:ring-2 hover:ring-[#DA0037]/30 hover:ring-offset-2"
                 >
                   Learn More
                 </Link>

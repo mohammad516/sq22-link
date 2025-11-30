@@ -10,7 +10,7 @@ interface ColorFilterProps {
 
 const colorMap: Record<string, string> = {
   white: "#FFFFFF",
-  black: "#000000",
+  black: "#171717",
   green: "#22C55E",
   navy: "#1E3A8A",
 };
@@ -18,13 +18,13 @@ const colorMap: Record<string, string> = {
 export default function ColorFilter({ colors, selectedColor, onColorSelect }: ColorFilterProps) {
   return (
     <div className="flex items-center gap-4 flex-wrap">
-      <span className="text-sm font-semibold text-[#252A34]">Filter by Color:</span>
+      <span className="text-sm font-semibold text-[#171717]">Filter by Color:</span>
       <button
         onClick={() => onColorSelect(null)}
         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
           selectedColor === null
-            ? "bg-[#08D9D6] text-white shadow-md"
-            : "bg-[#EAEAEA] text-[#252A34] hover:bg-[#08D9D6]/20"
+            ? "bg-[#DA0037] text-white shadow-md"
+            : "bg-[#EDEDED] text-[#171717] hover:bg-[#DA0037]/20 hover:text-[#DA0037]"
         }`}
       >
         All
@@ -37,8 +37,8 @@ export default function ColorFilter({ colors, selectedColor, onColorSelect }: Co
           whileTap={{ scale: 0.95 }}
           className={`w-10 h-10 rounded-full border-2 transition-all duration-200 ${
             selectedColor === color
-              ? "border-[#08D9D6] shadow-lg scale-110"
-              : "border-[#EAEAEA] hover:border-[#08D9D6]/50"
+              ? "border-[#DA0037] shadow-lg scale-110"
+              : "border-[#EDEDED] hover:border-[#DA0037]/50"
           }`}
           style={{
             backgroundColor: colorMap[color] || color,

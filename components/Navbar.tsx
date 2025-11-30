@@ -69,9 +69,9 @@ export default function Navbar() {
           <div
             className={`flex items-center justify-center rounded-2xl p-1.5 transition-all ${
               isContactPage || isCategoryPage
-                ? "bg-gradient-to-br from-[#08D9D6]/15 to-transparent shadow-sm ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
+                ? "bg-gradient-to-br from-[#DA0037]/15 to-transparent shadow-sm ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
                 : scrolled
-                ? "bg-gradient-to-br from-[#08D9D6]/15 to-transparent shadow-sm ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
+                ? "bg-gradient-to-br from-[#DA0037]/15 to-transparent shadow-sm ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
                 : "bg-white shadow-md ring-1 ring-white/20"
             }`}
           >
@@ -104,11 +104,11 @@ export default function Navbar() {
                 href={href}
                 className={`relative text-[0.95rem] lg:text-[1rem] font-semibold tracking-wide transition-colors ${
                   isContactPage || isCategoryPage
-                    ? "text-neutral-900 dark:text-white hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                    ? "text-neutral-900 dark:text-white hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                     : scrolled
-                    ? "text-neutral-900 dark:text-white hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                    ? "text-neutral-900 dark:text-white hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                     : "text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)] hover:text-white"
-                } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#08D9D6] after:transition-all after:duration-300 hover:after:w-full`}
+                } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#DA0037] after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {label}
               </Link>
@@ -124,11 +124,11 @@ export default function Navbar() {
             <button
               className={`relative flex items-center gap-1 text-[0.95rem] lg:text-[1rem] font-semibold tracking-wide transition-colors ${
                 isContactPage || isCategoryPage
-                  ? "text-neutral-900 dark:text-white hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                  ? "text-neutral-900 dark:text-white hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                   : scrolled
-                  ? "text-neutral-900 dark:text-white hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                  ? "text-neutral-900 dark:text-white hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                   : "text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)] hover:text-white"
-              } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#08D9D6] after:transition-all after:duration-300 hover:after:w-full`}
+              } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#DA0037] after:transition-all after:duration-300 hover:after:w-full`}
             >
               Categories
               <ChevronDown 
@@ -145,11 +145,11 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-[520px] bg-white rounded-xl shadow-2xl border border-[#EAEAEA] overflow-hidden z-50"
+                  className="absolute top-full left-0 mt-2 w-[520px] bg-white rounded-xl shadow-2xl border border-[#EDEDED] overflow-hidden z-50"
                 >
                   {/* Header with gradient */}
-                  <div className="bg-gradient-to-r from-[#08D9D6]/10 via-[#FF2E63]/10 to-[#08D9D6]/10 px-4 py-3 border-b border-[#EAEAEA]">
-                    <h3 className="text-sm font-bold text-[#252A34] uppercase tracking-wide">Browse Categories</h3>
+                  <div className="bg-gradient-to-r from-[#DA0037]/10 via-[#DA0037]/10 to-[#DA0037]/10 px-4 py-3 border-b border-[#EDEDED]">
+                    <h3 className="text-sm font-bold text-[#171717] uppercase tracking-wide">Browse Categories</h3>
                   </div>
                   
                   <div className="grid grid-cols-2">
@@ -159,33 +159,33 @@ export default function Navbar() {
                         <Link
                           key={category}
                           href={`/category/${getCategorySlugByName(category)}`}
-                          className="group relative block px-5 py-3 text-sm font-medium text-[#252A34] hover:bg-gradient-to-r hover:from-[#08D9D6]/10 hover:to-transparent hover:text-[#08D9D6] transition-all duration-200"
+                          className="group relative block px-5 py-3 text-sm font-medium text-[#171717] hover:bg-gradient-to-r hover:from-[#DA0037]/10 hover:to-transparent hover:text-[#DA0037] transition-all duration-200"
                         >
                           <span className="relative z-10 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#08D9D6] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#DA0037] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                             {category}
                           </span>
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#08D9D6] to-[#FF2E63] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DA0037] to-[#DA0037] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         </Link>
                       ))}
                     </div>
                     
                     {/* Divider */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#EAEAEA] to-transparent" />
+                    <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#EDEDED] to-transparent" />
                     
                     {/* Second Column - 7 items */}
-                    <div className="py-2 border-l border-[#EAEAEA]">
+                    <div className="py-2 border-l border-[#EDEDED]">
                       {categories.slice(6).map((category, index) => (
                         <Link
                           key={category}
                           href={`/category/${getCategorySlugByName(category)}`}
-                          className="group relative block px-5 py-3 text-sm font-medium text-[#252A34] hover:bg-gradient-to-r hover:from-[#FF2E63]/10 hover:to-transparent hover:text-[#FF2E63] transition-all duration-200"
+                          className="group relative block px-5 py-3 text-sm font-medium text-[#171717] hover:bg-gradient-to-r hover:from-[#DA0037]/10 hover:to-transparent hover:text-[#DA0037] transition-all duration-200"
                         >
                           <span className="relative z-10 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF2E63] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#DA0037] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                             {category}
                           </span>
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF2E63] to-[#08D9D6] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DA0037] to-[#DA0037] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         </Link>
                       ))}
                     </div>
@@ -204,11 +204,11 @@ export default function Navbar() {
                 href={href}
                 className={`relative text-[0.95rem] lg:text-[1rem] font-semibold tracking-wide transition-colors ${
                   isContactPage || isCategoryPage
-                    ? "text-neutral-900 dark:text-white hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                    ? "text-neutral-900 dark:text-white hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                     : scrolled
-                    ? "text-neutral-900 dark:text-white hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                    ? "text-neutral-900 dark:text-white hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                     : "text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)] hover:text-white"
-                } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#08D9D6] after:transition-all after:duration-300 hover:after:w-full`}
+                } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#DA0037] after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {label}
               </Link>
@@ -222,13 +222,13 @@ export default function Navbar() {
             href="tel:+96181366073"
             className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm transition-colors shadow-sm ${
               isContactPage || isCategoryPage
-                ? "bg-[#08D9D6] text-white hover:bg-[#FF2E63]"
+                ? "bg-[#DA0037] text-white hover:bg-[#DA0037]"
                 : scrolled
-                ? "bg-[#08D9D6] text-white hover:bg-[#FF2E63]"
+                ? "bg-[#DA0037] text-white hover:bg-[#DA0037]"
                 : "bg-white/15 text-white hover:bg-white/25 backdrop-blur-sm"
             }`}
           >
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#08D9D6]">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#DA0037]">
               <Phone size={16} />
             </span>
             <span>961 81 366073</span>
@@ -283,10 +283,10 @@ export default function Navbar() {
                   href="/"
                   className={`block py-3 px-6 text-lg transition-colors ${
                     isContactPage || isCategoryPage
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                       : scrolled 
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]" 
-                      : "text-neutral-700 hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]" 
+                      : "text-neutral-700 hover:text-[#DA0037]"
                   }`} 
                   onClick={() => setMenuOpen(false)}
                 >
@@ -298,10 +298,10 @@ export default function Navbar() {
                   href="/about"
                   className={`block py-3 px-6 text-lg transition-colors ${
                     isContactPage || isCategoryPage
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                       : scrolled 
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]" 
-                      : "text-neutral-700 hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]" 
+                      : "text-neutral-700 hover:text-[#DA0037]"
                   }`} 
                   onClick={() => setMenuOpen(false)}
                 >
@@ -313,10 +313,10 @@ export default function Navbar() {
                   onClick={() => setCategoriesDropdownOpen(!categoriesDropdownOpen)}
                   className={`w-full flex items-center justify-between py-3 px-6 text-lg transition-colors ${
                     isContactPage
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                       : scrolled 
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]" 
-                      : "text-neutral-700 hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]" 
+                      : "text-neutral-700 hover:text-[#DA0037]"
                   }`}
                 >
                   Categories
@@ -332,7 +332,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="bg-[#EAEAEA]/50 overflow-hidden max-h-[200px] overflow-y-auto"
+                      className="bg-[#EDEDED]/50 overflow-hidden max-h-[200px] overflow-y-auto"
                     >
                       {categories.map((category) => (
                         <li key={category}>
@@ -340,10 +340,10 @@ export default function Navbar() {
                             href={`/category/${getCategorySlugByName(category)}`}
                             className={`block py-2.5 px-10 text-base transition-colors ${
                               isContactPage
-                                ? "text-neutral-600 dark:text-neutral-400 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                                ? "text-neutral-600 dark:text-neutral-400 hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                                 : scrolled 
-                                ? "text-neutral-600 dark:text-neutral-400 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]" 
-                                : "text-neutral-600 hover:text-[#08D9D6]"
+                                ? "text-neutral-600 dark:text-neutral-400 hover:text-[#DA0037] dark:hover:text-[#DA0037]" 
+                                : "text-neutral-600 hover:text-[#DA0037]"
                             }`}
                             onClick={() => {
                               setMenuOpen(false);
@@ -363,10 +363,10 @@ export default function Navbar() {
                   href="/clients"
                   className={`block py-3 px-6 text-lg transition-colors ${
                     isContactPage || isCategoryPage
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                       : scrolled 
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]" 
-                      : "text-neutral-700 hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]" 
+                      : "text-neutral-700 hover:text-[#DA0037]"
                   }`} 
                   onClick={() => setMenuOpen(false)}
                 >
@@ -378,10 +378,10 @@ export default function Navbar() {
                   href="/contact"
                   className={`block py-3 px-6 text-lg transition-colors ${
                     isContactPage || isCategoryPage
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]"
                       : scrolled 
-                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#08D9D6] dark:hover:text-[#08D9D6]" 
-                      : "text-neutral-700 hover:text-[#08D9D6]"
+                      ? "text-neutral-700 dark:text-neutral-300 hover:text-[#DA0037] dark:hover:text-[#DA0037]" 
+                      : "text-neutral-700 hover:text-[#DA0037]"
                   }`} 
                   onClick={() => setMenuOpen(false)}
                 >
@@ -391,7 +391,7 @@ export default function Navbar() {
             </ul>
             <a
               href="tel:+96181787727"
-              className="inline-flex items-center gap-2 rounded-full bg-[#08D9D6] px-6 py-3 text-base text-white shadow-sm mx-6"
+              className="inline-flex items-center gap-2 rounded-full bg-[#DA0037] px-6 py-3 text-base text-white shadow-sm mx-6"
             >
               <Phone size={16} /> <span>961 81 787 727</span>
             </a>

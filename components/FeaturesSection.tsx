@@ -106,7 +106,7 @@ export default function FeaturesSection() {
               key={index}
               className="group flex flex-col items-center justify-center space-y-4"
             >
-              <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#08D9D6] to-[#EAEAEA] p-4 shadow-lg shadow-gray-100 transition-all duration-300 group-hover:scale-105">
+              <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-[#EDEDED] p-4 shadow-lg shadow-gray-100 transition-all duration-300 group-hover:scale-105">
                 <Image
                   src={feature.icon}
                   alt={feature.title}
@@ -116,7 +116,7 @@ export default function FeaturesSection() {
                 />
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-bold text-[#252A34] tracking-wide">
+                <h3 className="text-lg font-bold text-[#444444] tracking-wide">
                   {feature.title}
                 </h3>
               </div>
@@ -184,7 +184,7 @@ export default function FeaturesSection() {
                 className="group flex-shrink-0 snap-center"
               >
                 <div className="group flex flex-col items-center justify-center space-y-4 p-4">
-                  <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#08D9D6] to-[#EAEAEA] p-4 shadow-lg shadow-gray-100 transition-all duration-300 group-hover:scale-105">
+                  <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-[#EDEDED] p-4 shadow-lg shadow-gray-100 transition-all duration-300 group-hover:scale-105">
                     <Image
                       src={feature.icon}
                       alt={feature.title}
@@ -194,7 +194,7 @@ export default function FeaturesSection() {
                     />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-lg font-bold text-[#252A34] tracking-wide">
+                    <h3 className="text-lg font-bold text-[#444444] tracking-wide">
                       {feature.title}
                     </h3>
                   </div>

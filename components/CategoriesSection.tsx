@@ -10,7 +10,7 @@ const categories = [
     id: "Premium Polo Shirts",
     title: "Premium Polo Shirts",
     image: "/1-3.png",
-    gradient: "from-[#08D9D6] via-[#FF2E63] to-[#08D9D6]",
+    gradient: "from-[#DA0037] via-[#DA0037] to-[#DA0037]",
     position: "col-2-row-1", // Center top
     description: "High-quality polos designed for comfort, durability, and a sharp uniform look. Available with custom embroidery and full color options.",
   },
@@ -18,7 +18,7 @@ const categories = [
     id: "Executive Shirts",
     title: "Executive Shirts",
     image: "/3-6.png",
-    gradient: "from-[#FF2E63] to-[#08D9D6]",
+    gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-3-row-1", // Top right
     description: "Elegant, tailored shirts made for hotels, reception teams, and corporate staff. Premium fabrics and flawless finishing for a polished appearance.",
   },
@@ -26,7 +26,7 @@ const categories = [
     id: "Security Cargo Pants",
     title: "Security Cargo Pants",
     image: "/2-1.png",
-    gradient: "from-[#FF2E63] to-[#08D9D6]",
+    gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-1-row-2", // Bottom left
     description: "Reinforced, multi-pocket cargo pants built for strength and everyday performance. Perfect for security and industrial teams.",
   },
@@ -34,7 +34,7 @@ const categories = [
     id: "Chef Jackets",
     title: "Chef Jackets",
     image: "/1-5.png",
-    gradient: "from-[#08D9D6] to-[#FF2E63]",
+    gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-3-row-2", // Bottom right
     description: "Professional chef coats crafted for heat, comfort, and long work hours. Stylish cuts with durable stitching and breathable materials.",
   },
@@ -42,7 +42,7 @@ const categories = [
     id: "Custom Caps",
     title: "Custom Caps",
     image: "/2.png",
-    gradient: "from-[#08D9D6] to-[#FF2E63]",
+    gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-1-row-1", // Top left
     description: "High-quality caps available in multiple colors with your logo embroidered. Ideal for staff identity, events, and promotional use.",
   },
@@ -50,7 +50,7 @@ const categories = [
     id: "Ties & Accessories",
     title: "Ties & Accessories",
     image: "/4.png",
-    gradient: "from-[#FF2E63] to-[#08D9D6]",
+    gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-2-row-2", // Center bottom
     description: "Finishing pieces that complete the uniform — including ties, scarves, name badges, and personalized accessories.",
   }
@@ -121,17 +121,17 @@ export default function CategoriesSection() {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-20 md:py-28 bg-gradient-to-b from-white via-[#EAEAEA]/30 to-white overflow-hidden"
+      className="relative py-20 md:py-28 bg-gradient-to-b from-white via-[#EDEDED]/30 to-white overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           style={{ opacity, y }}
-          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#08D9D6]/20 to-transparent rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#DA0037]/20 to-transparent rounded-full blur-3xl"
         />
         <motion.div
           style={{ opacity: useTransform(scrollYProgress, [0, 1], [0.2, 0.8]) }}
-          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-[#FF2E63]/20 to-transparent rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-[#DA0037]/20 to-transparent rounded-full blur-3xl"
         />
       </div>
 
@@ -151,11 +151,11 @@ export default function CategoriesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-gradient-to-r from-[#252A34] via-[#08D9D6] to-[#252A34] bg-clip-text text-transparent animate-gradient">
+            <span className="bg-gradient-to-r from-[#171717] via-[#DA0037] to-[#171717] bg-clip-text text-transparent animate-gradient">
               Featured Products
             </span>
             <motion.div
-              className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#08D9D6] to-transparent"
+              className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#DA0037] to-transparent"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -235,7 +235,7 @@ export default function CategoriesSection() {
                 <motion.div
                   className="absolute inset-0 border-2 border-transparent"
                   whileHover={{
-                    borderColor: "#08D9D6",
+                    borderColor: "#DA0037",
                     boxShadow: "0 0 30px rgba(8, 217, 214, 0.5)",
                   }}
                   transition={{ duration: 0.3 }}
@@ -254,7 +254,7 @@ export default function CategoriesSection() {
                 {[...Array(3)].map((_, i) => (
                   <motion.div
                     key={i}
-                    className="absolute w-2 h-2 bg-[#08D9D6] rounded-full opacity-0 group-hover:opacity-60"
+                    className="absolute w-2 h-2 bg-[#DA0037] rounded-full opacity-0 group-hover:opacity-60"
                     initial={{
                       x: `${20 + i * 30}%`,
                       y: `${30 + i * 20}%`,
@@ -306,10 +306,10 @@ export default function CategoriesSection() {
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-[#EAEAEA] transition-colors"
+                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-[#EDEDED] transition-colors"
                   aria-label="Close"
                 >
-                  <X className="w-6 h-6 text-[#252A34]" />
+                  <X className="w-6 h-6 text-[#171717]" />
                 </button>
 
                 {/* Category Image */}
@@ -332,7 +332,7 @@ export default function CategoriesSection() {
                 </div>
 
                 {/* Description */}
-                <p className="text-lg text-[#252A34]/80 leading-relaxed">
+                <p className="text-lg text-[#171717]/80 leading-relaxed">
                   {selectedCategoryData.description}
                 </p>
 

@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background matching AboutPreviewSection */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#EAEAEA] via-[#F9FAFB] to-[#08D9D6]/20">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#EDEDED] via-[#EDEDED] to-[#DA0037]/20">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(110,118,180,0.15)_1px,transparent_0)] bg-[length:20px_20px]" />
@@ -22,7 +22,7 @@ const HeroSection = () => {
         
         {/* Floating SVG Elements */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-[#08D9D6]/20 to-[#FF2E63]/20 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-[#DA0037]/20 to-[#DA0037]/20 rounded-full blur-xl"
           animate={{
             y: [0, -20, 0],
             x: [0, 10, 0],
@@ -35,7 +35,7 @@ const HeroSection = () => {
           }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-[#FF2E63]/15 to-[#08D9D6]/15 rounded-full blur-2xl"
+          className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-[#DA0037]/15 to-[#DA0037]/15 rounded-full blur-2xl"
           animate={{
             y: [0, 30, 0],
             x: [0, -15, 0],
@@ -49,7 +49,7 @@ const HeroSection = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-40 left-1/4 w-24 h-24 bg-gradient-to-r from-[#08D9D6]/20 to-[#FF2E63]/20 rounded-full blur-xl"
+          className="absolute bottom-40 left-1/4 w-24 h-24 bg-gradient-to-r from-[#DA0037]/20 to-[#DA0037]/20 rounded-full blur-xl"
           animate={{
             y: [0, -25, 0],
             x: [0, 20, 0],
@@ -74,9 +74,9 @@ const HeroSection = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-bold uppercase tracking-wider text-[#08D9D6] mb-8 shadow-lg"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-bold uppercase tracking-wider text-[#DA0037] mb-8 shadow-lg"
           >
-            <Heart className="w-4 h-4 text-[#08D9D6]" />
+            <Heart className="w-4 h-4 text-[#DA0037]" />
             <span>Premium Wellness Experience</span>
           </motion.div>
 
@@ -84,7 +84,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#252A34] mb-6 leading-tight font-serif tracking-wide"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#171717] mb-6 leading-tight font-serif tracking-wide"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Contact Us
@@ -94,14 +94,14 @@ const HeroSection = () => {
             initial={{ opacity: 0, scaleX: 0 }}
             animate={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="w-24 h-[1px] bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] mx-auto mb-8"
+            className="w-24 h-[1px] bg-gradient-to-r from-[#DA0037] to-[#DA0037] mx-auto mb-8"
           />
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-xl md:text-2xl text-[#252A34]/90 max-w-3xl mx-auto leading-relaxed mb-12 font-sans"
+            className="text-xl md:text-2xl text-[#171717]/90 max-w-3xl mx-auto leading-relaxed mb-12 font-sans"
             style={{ fontFamily: 'var(--font-inter), sans-serif' }}
           >
             Begin your journey to wellness and transformation. 
@@ -118,7 +118,7 @@ const HeroSection = () => {
               onClick={scrollToForm}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-[0_8px_30px_rgb(8,217,214,0.4)] hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] transition-all duration-300 flex items-center gap-3 hover:scale-110 hover:from-[#FF2E63] hover:to-[#08D9D6] hover:ring-2 hover:ring-[#08D9D6]/30 hover:ring-offset-2"
+              className="group bg-gradient-to-r from-[#DA0037] to-[#DA0037] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-[0_8px_30px_rgb(8,217,214,0.4)] hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] transition-all duration-300 flex items-center gap-3 hover:scale-110 hover:from-[#DA0037] hover:to-[#DA0037] hover:ring-2 hover:ring-[#DA0037]/30 hover:ring-offset-2"
             >
               <span>Book a Free Consultation</span>
               <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
@@ -128,9 +128,9 @@ const HeroSection = () => {
               href="tel:+96181787727"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-white/90 backdrop-blur-sm text-[#252A34] px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 border border-[#08D9D6]/20"
+              className="group bg-white/90 backdrop-blur-sm text-[#171717] px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 border border-[#DA0037]/20 hover:text-[#DA0037]"
             >
-              <Phone className="w-5 h-5 text-[#08D9D6]" />
+              <Phone className="w-5 h-5 text-[#DA0037]" />
               <span>Call Now</span>
             </motion.a>
           </motion.div>
@@ -147,12 +147,12 @@ const HeroSection = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-[#08D9D6] rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-[#DA0037] rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-[#08D9D6] rounded-full mt-2"
+            className="w-1 h-3 bg-[#DA0037] rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
@@ -181,20 +181,20 @@ const ContactInfoCard = ({ icon: Icon, title, content, subtitle, delay = 0 }: {
     >
       <div className="flex items-start space-x-4">
         <motion.div 
-          className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#08D9D6] to-[#FF2E63] rounded-2xl flex items-center justify-center group-hover:from-[#FF2E63] group-hover:to-[#08D9D6] transition-all duration-300 shadow-sm"
+          className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#DA0037] to-[#DA0037] rounded-2xl flex items-center justify-center group-hover:from-[#DA0037] group-hover:to-[#DA0037] transition-all duration-300 shadow-sm"
           whileHover={{ rotate: 5, scale: 1.1 }}
         >
           <Icon className="w-6 h-6 text-white group-hover:text-white transition-colors duration-300" />
         </motion.div>
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-[#252A34] mb-2 group-hover:text-[#08D9D6] transition-colors duration-300">
+          <h3 className="text-xl font-semibold text-[#171717] mb-2 group-hover:text-[#DA0037] transition-colors duration-300">
             {title}
           </h3>
-          <div className="text-[#252A34]/90 leading-relaxed font-sans">
+          <div className="text-[#171717]/90 leading-relaxed font-sans">
             {content}
           </div>
           {subtitle && (
-            <p className="text-sm text-[#252A34]/70 mt-2 italic">{subtitle}</p>
+            <p className="text-sm text-[#171717]/70 mt-2 italic">{subtitle}</p>
           )}
         </div>
       </div>
@@ -266,17 +266,17 @@ const ContactForm = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#08D9D6] to-[#FF2E63] rounded-2xl mb-4 shadow-sm"
+            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#DA0037] to-[#DA0037] rounded-2xl mb-4 shadow-sm"
           >
             <Send className="w-8 h-8 text-white" />
           </motion.div>
           <h2 
-            className="text-3xl md:text-4xl font-bold text-[#252A34] mb-4 font-serif tracking-wide"
+            className="text-3xl md:text-4xl font-bold text-[#171717] mb-4 font-serif tracking-wide"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
             Send us a Message
           </h2>
-          <p className="text-[#252A34]/90 text-lg font-sans">
+          <p className="text-[#171717]/90 text-lg font-sans">
             We&apos;ll get back to you within 24 hours
           </p>
         </div>
@@ -289,7 +289,7 @@ const ContactForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <label htmlFor="name" className="block text-sm font-semibold text-[#252A34] mb-3">
+              <label htmlFor="name" className="block text-sm font-semibold text-[#171717] mb-3">
                 Full Name *
               </label>
               <motion.input
@@ -300,7 +300,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 whileFocus={{ scale: 1.02 }}
-                className="w-full px-4 py-4 rounded-2xl border-2 border-[#08D9D6]/20 focus:border-[#08D9D6] focus:ring-4 focus:ring-[#08D9D6]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#252A34]/50 font-sans"
+                className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50 font-sans"
                 placeholder="Your full name"
               />
             </motion.div>
@@ -311,7 +311,7 @@ const ContactForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <label htmlFor="email" className="block text-sm font-semibold text-[#252A34] mb-3">
+              <label htmlFor="email" className="block text-sm font-semibold text-[#171717] mb-3">
                 Email Address *
               </label>
               <motion.input
@@ -322,7 +322,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 whileFocus={{ scale: 1.02 }}
-                className="w-full px-4 py-4 rounded-2xl border-2 border-[#08D9D6]/20 focus:border-[#08D9D6] focus:ring-4 focus:ring-[#08D9D6]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#252A34]/50 font-sans"
+                className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50 font-sans"
                 placeholder="your@email.com"
               />
             </motion.div>
@@ -334,7 +334,7 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <label htmlFor="phone" className="block text-sm font-semibold text-[#252A34] mb-3">
+            <label htmlFor="phone" className="block text-sm font-semibold text-[#171717] mb-3">
               Phone Number
             </label>
             <motion.input
@@ -344,7 +344,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleInputChange}
               whileFocus={{ scale: 1.02 }}
-              className="w-full px-4 py-4 rounded-2xl border-2 border-[#08D9D6]/20 focus:border-[#08D9D6] focus:ring-4 focus:ring-[#08D9D6]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#252A34]/50 font-sans"
+              className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50 font-sans"
               placeholder="+961 XX XXX XXX"
             />
           </motion.div>
@@ -355,7 +355,7 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <label htmlFor="message" className="block text-sm font-semibold text-[#252A34] mb-3">
+            <label htmlFor="message" className="block text-sm font-semibold text-[#171717] mb-3">
               Message *
             </label>
             <motion.textarea
@@ -366,7 +366,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleInputChange}
               whileFocus={{ scale: 1.02 }}
-              className="w-full px-4 py-4 rounded-2xl border-2 border-[#08D9D6]/20 focus:border-[#08D9D6] focus:ring-4 focus:ring-[#08D9D6]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#252A34]/50 font-sans resize-none"
+              className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50 font-sans resize-none"
               placeholder="Tell us how we can help you on your wellness journey..."
             />
           </motion.div>
@@ -380,9 +380,9 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="w-full bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] text-white py-5 px-8 rounded-full font-semibold text-xl shadow-[0_8px_30px_rgb(8,217,214,0.4)] hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 relative overflow-hidden group hover:scale-110 hover:from-[#FF2E63] hover:to-[#08D9D6] hover:ring-2 hover:ring-[#08D9D6]/30 hover:ring-offset-2"
+            className="w-full bg-gradient-to-r from-[#DA0037] to-[#DA0037] text-white py-5 px-8 rounded-full font-semibold text-xl shadow-[0_8px_30px_rgb(8,217,214,0.4)] hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 relative overflow-hidden group hover:scale-110 hover:from-[#DA0037] hover:to-[#DA0037] hover:ring-2 hover:ring-[#DA0037]/30 hover:ring-offset-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FF2E63] to-[#08D9D6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#DA0037] to-[#DA0037] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10 flex items-center space-x-3">
               {isSubmitting ? (
                 <>
@@ -422,21 +422,21 @@ const ContactForm = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="w-16 h-16 bg-gradient-to-br from-[#08D9D6] to-[#FF2E63] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm"
+              className="w-16 h-16 bg-gradient-to-br from-[#DA0037] to-[#DA0037] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm"
             >
               <CheckCircle2 className="w-8 h-8 text-white" />
             </motion.div>
-            <h3 className="text-2xl font-bold font-serif text-[#252A34] mb-2 tracking-wide">
+            <h3 className="text-2xl font-bold font-serif text-[#171717] mb-2 tracking-wide">
               Message Sent!
             </h3>
-            <p className="text-[#252A34]/90 mb-6 font-sans">
+            <p className="text-[#171717]/90 mb-6 font-sans">
               Thank you for reaching out! We&apos;ll get back to you within 24 hours.
             </p>
             <motion.button
               onClick={() => setShowSuccessModal(false)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] text-white px-6 py-3 rounded-full font-semibold shadow-[0_8px_30px_rgb(8,217,214,0.4)] hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] transition-all duration-300 hover:scale-110 hover:from-[#FF2E63] hover:to-[#08D9D6] hover:ring-2 hover:ring-[#08D9D6]/30 hover:ring-offset-2"
+              className="bg-gradient-to-r from-[#DA0037] to-[#DA0037] text-white px-6 py-3 rounded-full font-semibold shadow-[0_8px_30px_rgb(8,217,214,0.4)] hover:shadow-[0_12px_40px_rgb(8,217,214,0.6)] transition-all duration-300 hover:scale-110 hover:from-[#DA0037] hover:to-[#DA0037] hover:ring-2 hover:ring-[#DA0037]/30 hover:ring-offset-2"
             >
               Close
             </motion.button>
@@ -464,7 +464,7 @@ const SocialIcons = () => {
       className="text-center"
     >
       <h3 
-        className="text-2xl font-bold font-serif text-[#252A34] mb-8 tracking-wide"
+        className="text-2xl font-bold font-serif text-[#171717] mb-8 tracking-wide"
         style={{ fontFamily: 'var(--font-playfair), serif' }}
       >
         Connect With Us
@@ -515,17 +515,17 @@ const MapSection = () => {
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#08D9D6] to-[#FF2E63] rounded-2xl mb-6 shadow-sm"
+          className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#DA0037] to-[#DA0037] rounded-2xl mb-6 shadow-sm"
         >
           <MapPin className="w-8 h-8 text-white" />
         </motion.div>
         <h2 
-          className="text-4xl font-bold font-serif text-[#252A34] mb-4 tracking-wide"
+          className="text-4xl font-bold font-serif text-[#171717] mb-4 tracking-wide"
           style={{ fontFamily: 'var(--font-playfair), serif' }}
         >
           Find Us
         </h2>
-        <p className="text-xl text-[#252A34]/90 max-w-2xl mx-auto font-sans">
+        <p className="text-xl text-[#171717]/90 max-w-2xl mx-auto font-sans">
           Visit our beautiful wellness center in Jounieh
         </p>
       </div>
@@ -559,7 +559,7 @@ const Contact = () => {
       <HeroSection />
       
       {/* Main Content */}
-      <div className="relative z-10 bg-gradient-to-br from-[#EAEAEA] via-[#F9FAFB] to-[#08D9D6]/20">
+      <div className="relative z-10 bg-gradient-to-br from-[#EDEDED] via-[#EDEDED] to-[#DA0037]/20">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(8,217,214,0.15)_1px,transparent_0)] bg-[length:20px_20px]" />
@@ -576,7 +576,7 @@ const Contact = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h2 
-                  className="text-4xl font-bold font-serif text-[#252A34] mb-12 tracking-wide"
+                  className="text-4xl font-bold font-serif text-[#171717] mb-12 tracking-wide"
                   style={{ fontFamily: 'var(--font-playfair), serif' }}
                 >
                   Get in Touch

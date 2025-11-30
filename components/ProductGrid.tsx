@@ -13,7 +13,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-lg text-[#252A34]/60">No products found matching your filter.</p>
+        <p className="text-lg text-[#171717]/60">No products found matching your filter.</p>
       </div>
     );
   }
@@ -30,9 +30,9 @@ export default function ProductGrid({ products }: ProductGridProps) {
         >
           <Link
             href={`/product/${product.id}`}
-            className="block bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#EAEAEA]"
+            className="block bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#EDEDED]"
           >
-            <div className="relative aspect-square overflow-hidden bg-[#EAEAEA]">
+            <div className="relative aspect-square overflow-hidden bg-[#EDEDED]">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -41,10 +41,10 @@ export default function ProductGrid({ products }: ProductGridProps) {
               />
             </div>
             <div className="p-4">
-              <h3 className="font-semibold text-[#252A34] mb-1 group-hover:text-[#08D9D6] transition-colors">
+              <h3 className="font-semibold text-[#171717] mb-1 group-hover:text-[#DA0037] transition-colors">
                 {product.name}
               </h3>
-              <p className="text-sm text-[#252A34]/60 capitalize">{product.color}</p>
+              <p className="text-sm text-[#171717]/60 capitalize">{product.color}</p>
             </div>
           </Link>
         </motion.div>

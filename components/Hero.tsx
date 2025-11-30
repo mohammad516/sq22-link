@@ -63,7 +63,7 @@ export default function Hero() {
       {/* Animated gradient overlay with color accents */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-r from-[#08D9D6]/10 via-transparent to-[#FF2E63]/10"
+        className="absolute inset-0 bg-gradient-to-r from-[#DA0037]/10 via-transparent to-[#DA0037]/10"
         animate={{
           opacity: [0.3, 0.6, 0.3],
         }}
@@ -86,7 +86,7 @@ export default function Hero() {
         ].map((particle, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-gradient-to-br from-[#08D9D6]/20 to-[#FF2E63]/20 blur-xl hidden sm:block"
+            className="absolute rounded-full bg-gradient-to-br from-[#DA0037]/20 to-[#DA0037]/20 blur-xl hidden sm:block"
             style={{
               width: `${particle.width}px`,
               height: `${particle.height}px`,
@@ -111,7 +111,7 @@ export default function Hero() {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={`mobile-${i}`}
-            className="absolute rounded-full bg-gradient-to-br from-[#08D9D6]/15 to-[#FF2E63]/15 blur-lg sm:hidden"
+            className="absolute rounded-full bg-gradient-to-br from-[#DA0037]/15 to-[#DA0037]/15 blur-lg sm:hidden"
             style={{
               width: `${60 + i * 20}px`,
               height: `${60 + i * 20}px`,
@@ -147,7 +147,7 @@ export default function Hero() {
             ease: "easeInOut"
           }}
         />
-        <div className="absolute left-1/2 top-1/2 z-[-1] h-[75%] sm:h-[80%] w-[100%] sm:w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#08D9D6]/8 via-[#FF2E63]/8 to-[#08D9D6]/8 sm:from-[#08D9D6]/5 sm:via-[#FF2E63]/5 sm:to-[#08D9D6]/5 blur-2xl sm:blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 z-[-1] h-[75%] sm:h-[80%] w-[100%] sm:w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#DA0037]/8 via-[#DA0037]/8 to-[#DA0037]/8 sm:from-[#DA0037]/5 sm:via-[#DA0037]/5 sm:to-[#DA0037]/5 blur-2xl sm:blur-3xl" />
 
         <motion.div variants={containerVariants} initial="hidden" animate="show">
           <motion.div 
@@ -175,26 +175,21 @@ export default function Hero() {
             }}
           >
             <motion.span
-              className="block bg-gradient-to-r from-white via-[#08D9D6] to-[#FF2E63] bg-clip-text text-transparent"
+              className="block text-white"
               animate={{
-                backgroundPosition: ["0%", "200%", "0%"],
+                color: ["#FFFFFF", "#DA0037", "#FFFFFF"],
               }}
               transition={{
-                duration: 5,
+                duration: 3,
                 repeat: Infinity,
-                ease: "linear"
-              }}
-              style={{
-                backgroundSize: "200% auto",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
+                ease: "easeInOut"
               }}
             >
               Squad Link
             </motion.span>
             {/* Glow effect behind text - enhanced on mobile */}
             <motion.div
-              className="absolute inset-0 blur-2xl sm:blur-3xl bg-gradient-to-r from-[#08D9D6]/40 via-[#FF2E63]/40 to-[#08D9D6]/40 sm:from-[#08D9D6]/40 sm:via-[#FF2E63]/40 sm:to-[#08D9D6]/40 -z-10"
+              className="absolute inset-0 blur-2xl sm:blur-3xl bg-gradient-to-r from-[#DA0037]/40 via-[#DA0037]/40 to-[#DA0037]/40 sm:from-[#DA0037]/40 sm:via-[#DA0037]/40 sm:to-[#DA0037]/40 -z-10"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.4, 0.6, 0.4],
@@ -222,14 +217,10 @@ export default function Hero() {
               It's Not About Brand
             </motion.span>
             <motion.span
-              className="font-semibold bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] bg-clip-text text-transparent"
+              className="font-semibold text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              style={{
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
             >
               It's About Style
             </motion.span>
@@ -244,7 +235,7 @@ export default function Hero() {
             <motion.a
               href="/contact"
               aria-label="Contact Us"
-              className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] px-4 sm:px-8 py-2.5 sm:py-4 text-xs sm:text-base font-semibold text-white overflow-hidden min-h-[40px] sm:min-h-[56px]"
+              className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-gradient-to-r from-[#DA0037] to-[#DA0037] px-4 sm:px-8 py-2.5 sm:py-4 text-xs sm:text-base font-semibold text-white overflow-hidden min-h-[40px] sm:min-h-[56px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{
@@ -253,7 +244,7 @@ export default function Hero() {
             >
               {/* Animated gradient overlay */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#FF2E63] to-[#08D9D6] opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 bg-gradient-to-r from-[#DA0037] to-[#DA0037] opacity-0 group-hover:opacity-100"
                 transition={{ duration: 0.3 }}
               />
               <span className="relative z-10 flex items-center gap-1.5 sm:gap-2">
@@ -280,7 +271,7 @@ export default function Hero() {
               href="/categories"
               aria-label="View Products"
               className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-full border-2 border-white/90 backdrop-blur-sm px-4 sm:px-8 py-2.5 sm:py-4 text-xs sm:text-base font-semibold text-white overflow-hidden min-h-[40px] sm:min-h-[56px]"
-              whileHover={{ scale: 1.05, borderColor: "#08D9D6" }}
+              whileHover={{ scale: 1.05, borderColor: "#DA0037" }}
               whileTap={{ scale: 0.95 }}
               style={{
                 boxShadow: "0 5px 20px rgba(0,0,0,0.4), inset 0 0 15px rgba(255,255,255,0.08)"
@@ -318,7 +309,7 @@ export default function Hero() {
           </div>
           {/* Pulsing ring - smaller on mobile */}
           <motion.div
-            className="absolute inset-0 rounded-full border-2 border-[#08D9D6]/50"
+            className="absolute inset-0 rounded-full border-2 border-[#DA0037]/50"
             animate={{
               scale: [1, 1.4, 1],
               opacity: [0.4, 0, 0.4],
@@ -346,7 +337,7 @@ export default function Hero() {
             <motion.div
               className={`h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full ${
                 idx === current 
-                  ? "bg-gradient-to-r from-[#08D9D6] to-[#FF2E63]" 
+                  ? "bg-gradient-to-r from-[#DA0037] to-[#DA0037]" 
                   : "bg-white/40"
               }`}
               initial={false}
@@ -359,7 +350,7 @@ export default function Hero() {
             />
             {idx === current && (
               <motion.div
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] blur-sm sm:blur-md opacity-40 sm:opacity-50"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-[#DA0037] to-[#DA0037] blur-sm sm:blur-md opacity-40 sm:opacity-50"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1.4, opacity: 0 }}
                 transition={{ duration: 1.5, repeat: Infinity }}

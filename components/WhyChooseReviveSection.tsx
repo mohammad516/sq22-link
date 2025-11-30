@@ -63,14 +63,14 @@ const features = [
     title: "Inside a Full-Service Hospital",
     description:
       "Revive Wellness Center is the only center in the region located within a leading hospital, providing unmatched medical credibility and access to a trusted patient base.",
-    iconBg: "from-[#08D9D6]/80 to-[#08D9D6]/60",
+    iconBg: "from-[#DA0037]/80 to-[#DA0037]/60",
     hasStructuredList: false,
   },
   {
     Icon: Users2,
     title: "Multispecialty Collaboration",
     description: "Comprehensive care across multiple specialties:",
-    iconBg: "from-[#FF2E63]/80 to-[#08D9D6]/60",
+    iconBg: "from-[#DA0037]/80 to-[#DA0037]/60",
     hasStructuredList: true,
     services: [
       {
@@ -133,9 +133,9 @@ export default function WhyChooseReviveSection({
 
       {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -right-16 sm:-right-32 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-[#08D9D6]/20 to-[#08D9D6]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/4 -right-16 sm:-right-32 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-[#DA0037]/20 to-[#DA0037]/10 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-1/4 -left-16 sm:-left-32 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-br from-[#FF2E63]/20 to-[#FF2E63]/10 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/4 -left-16 sm:-left-32 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-to-br from-[#DA0037]/20 to-[#DA0037]/10 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
       </div>
@@ -149,14 +149,14 @@ export default function WhyChooseReviveSection({
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-[#252A34] leading-tight mb-2 sm:mb-3 md:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-[#171717] leading-tight mb-2 sm:mb-3 md:mb-4">
             Why Choose Revive?
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-[#252A34]/70 mt-1 sm:mt-2 font-medium tracking-wide mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto px-2">
+          <p className="text-sm sm:text-base md:text-lg text-[#171717]/70 mt-1 sm:mt-2 font-medium tracking-wide mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto px-2">
             A center of trust, innovation, and holistic care
           </p>
           <motion.div
-            className="mx-auto h-1 w-20 sm:w-24 bg-gradient-to-r from-[#08D9D6] via-[#FF2E63] to-transparent rounded-full"
+            className="mx-auto h-1 w-20 sm:w-24 bg-gradient-to-r from-[#DA0037] via-[#DA0037] to-transparent rounded-full"
             variants={underlineVariants}
             initial="hidden"
             whileInView="show"
@@ -184,7 +184,7 @@ export default function WhyChooseReviveSection({
                 <div className="flex items-start gap-2 sm:gap-3 md:gap-5">
                   <div className="relative">
                     <div
-                      className={`flex h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${feature.iconBg} text-white shadow-lg hover:ring-4 hover:ring-[#08D9D6]/30 transition-all duration-300`}
+                      className={`flex h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${feature.iconBg} text-white shadow-lg hover:ring-4 hover:ring-[#DA0037]/30 transition-all duration-300`}
                     >
                       <feature.Icon
                         size={18}
@@ -197,20 +197,20 @@ export default function WhyChooseReviveSection({
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-[#252A34] mb-1 sm:mb-2 md:mb-3 leading-tight">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-[#171717] mb-1 sm:mb-2 md:mb-3 leading-tight">
                       {feature.title}
                     </h3>
 
                     {feature.hasStructuredList ? (
                       <div className="space-y-3 sm:space-y-4">
-                        <p className="text-xs sm:text-sm md:text-base leading-relaxed text-[#252A34]/80">
+                        <p className="text-xs sm:text-sm md:text-base leading-relaxed text-[#171717]/80">
                           {feature.description}
                         </p>
                         <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 place-items-stretch">
                           {feature.services?.map((service, serviceIdx) => (
                             <motion.div
                               key={service.category}
-                              className="rounded-md sm:rounded-lg md:rounded-xl bg-gradient-to-br from-white to-[#EAEAEA] border border-[#EAEAEA] hover:border-[#08D9D6] hover:shadow-md transition-all duration-300 ease-out p-2 sm:p-3 md:p-4 hover:rotate-[0.5deg] hover:scale-105 active:scale-[0.98] sm:active:scale-105 min-w-[120px] sm:min-w-[140px]"
+                              className="rounded-md sm:rounded-lg md:rounded-xl bg-gradient-to-br from-white to-[#EAEAEA] border border-[#EAEAEA] hover:border-[#DA0037] hover:shadow-md transition-all duration-300 ease-out p-2 sm:p-3 md:p-4 hover:rotate-[0.5deg] hover:scale-105 active:scale-[0.98] sm:active:scale-105 min-w-[120px] sm:min-w-[140px]"
                               initial={{ opacity: 0, y: 8 }}
                               whileInView={{ opacity: 1, y: 0 }}
                               viewport={{ once: true }}
@@ -223,11 +223,11 @@ export default function WhyChooseReviveSection({
                                 <span className="text-sm sm:text-base md:text-lg">
                                   {service.icon}
                                 </span>
-                                <h4 className="font-medium text-[#252A34] text-xs sm:text-sm md:text-sm">
+                                <h4 className="font-medium text-[#171717] text-xs sm:text-sm md:text-sm">
                                   {service.category}
                                 </h4>
                               </div>
-                              <p className="text-[#252A34]/70 text-xs sm:text-sm leading-relaxed">
+                              <p className="text-[#171717]/70 text-xs sm:text-sm leading-relaxed">
                                 {service.services.join(", ")}
                               </p>
                             </motion.div>
@@ -263,9 +263,9 @@ export default function WhyChooseReviveSection({
               ease: "easeInOut",
             }}
           >
-            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 md:-top-8 md:-right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-32 md:h-32 bg-gradient-to-br from-[#08D9D6]/30 to-[#FF2E63]/20 rounded-full blur-2xl" />
+            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 md:-top-8 md:-right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-32 md:h-32 bg-gradient-to-br from-[#DA0037]/30 to-[#DA0037]/20 rounded-full blur-2xl" />
 
-            <div className="relative bg-gradient-to-tr from-[#08D9D6]/30 via-white to-[#FF2E63]/20 p-[1px] sm:p-[2px] md:p-[3px] rounded-[1rem] sm:rounded-[1.5rem] md:rounded-[2rem] shadow-lg">
+            <div className="relative bg-gradient-to-tr from-[#DA0037]/30 via-white to-[#DA0037]/20 p-[1px] sm:p-[2px] md:p-[3px] rounded-[1rem] sm:rounded-[1.5rem] md:rounded-[2rem] shadow-lg">
               <div className="relative overflow-hidden rounded-[0.75rem] sm:rounded-[1.25rem] md:rounded-[1.5rem] bg-white shadow-[0_8px_25px_rgba(0,0,0,0.1)] sm:shadow-[0_10px_30px_rgba(0,0,0,0.1)] md:shadow-[0_20px_60px_rgba(0,0,0,0.1)]">
                 <div className="relative aspect-[3/4] sm:aspect-[4/5] w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-none">
                   <Image
@@ -292,7 +292,7 @@ export default function WhyChooseReviveSection({
         >
           <motion.button
             onClick={() => router.push("/services")} // ✅ الزر الآن ينقلك لصفحة الخدمات
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] text-white font-medium rounded-full shadow-lg hover:translate-x-1 transition-all duration-300 hover:shadow-xl text-sm sm:text-base"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-[#DA0037] to-[#DA0037] text-white font-medium rounded-full shadow-lg hover:translate-x-1 transition-all duration-300 hover:shadow-xl text-sm sm:text-base"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

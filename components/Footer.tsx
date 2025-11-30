@@ -32,7 +32,7 @@ const BackToTopButton = () => {
   return (
     <motion.button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-[#08D9D6] to-[#FF2E63] text-white shadow-lg hover:shadow-xl transition-all duration-300 ${
+      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-[#DA0037] to-[#DA0037] text-white shadow-lg hover:shadow-xl transition-all duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       initial={{ scale: 0, rotate: -180 }}
@@ -78,7 +78,7 @@ const SocialIcon = ({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="p-2 rounded-lg bg-white/10 dark:bg-neutral-800/20 backdrop-blur-sm border border-white/20 dark:border-neutral-700/30 hover:border-[#08D9D6]/50 transition-all duration-300"
+    className="p-2 rounded-lg bg-white/10 dark:bg-neutral-800/20 backdrop-blur-sm border border-white/20 dark:border-neutral-700/30 hover:border-[#DA0037]/50 transition-all duration-300"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -90,7 +90,7 @@ const SocialIcon = ({
     }}
     whileTap={{ scale: 0.95 }}
   >
-    <Icon className="w-5 h-5 text-neutral-600 dark:text-neutral-300 hover:text-[#08D9D6] transition-colors duration-300" />
+    <Icon className="w-5 h-5 text-neutral-600 dark:text-neutral-300 hover:text-[#DA0037] transition-colors duration-300" />
     <span className="sr-only">{label}</span>
   </motion.a>
 );
@@ -99,11 +99,11 @@ const Footer = () => (
   <>
     <footer className="relative mt-20 md:mt-28 overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#EAEAEA]/50 via-[#08D9D6]/30 to-[#FF2E63]/30 dark:from-neutral-900/80 dark:via-neutral-800/60 dark:to-neutral-900/80 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#EDEDED]/50 via-[#444444]/30 to-[#EDEDED]/50 dark:from-neutral-900/80 dark:via-neutral-800/60 dark:to-neutral-900/80 backdrop-blur-sm" />
       
       {/* Animated Gradient Divider */}
       <motion.div 
-        className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#08D9D6] to-transparent"
+        className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#DA0037] to-transparent"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
@@ -125,7 +125,7 @@ const Footer = () => (
               filter: "drop-shadow(0 0 25px rgba(8, 217, 214, 0.4))"
             }}
           >
-            <div className="relative p-2 rounded-2xl bg-gradient-to-br from-white/80 to-[#EAEAEA]/50 backdrop-blur-sm border border-white/30 shadow-lg group-hover:shadow-xl transition-all duration-300">
+            <div className="relative p-2 rounded-2xl bg-gradient-to-br from-white/80 to-[#EDEDED]/50 backdrop-blur-sm border border-white/30 shadow-lg group-hover:shadow-xl transition-all duration-300">
               <Image 
                 src="/logo.png" 
                 alt="Squadlink Logo" 
@@ -135,7 +135,7 @@ const Footer = () => (
                 priority
               />
               {/* Animated glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#08D9D6]/20 to-[#FF2E63]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#DA0037]/20 to-[#DA0037]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
             </div>
           </motion.div>
           
@@ -156,7 +156,7 @@ const Footer = () => (
           {/* Copyright and Email */}
           <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-6 text-center lg:text-left">
             <motion.div 
-              className="text-sm text-neutral-500 dark:text-neutral-400 flex items-center gap-1"
+              className="text-sm text-[#171717] flex items-center gap-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -176,14 +176,14 @@ const Footer = () => (
             
             <motion.a 
               href="mailto:revive@revivecenterlb.com" 
-              className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 hover:text-[#08D9D6] dark:hover:text-[#08D9D6] transition-all duration-300 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50 hover:underline"
+              className="inline-flex items-center gap-2 text-sm text-[#171717] hover:text-[#DA0037] transition-all duration-300 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50 hover:underline"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4 text-[#171717]" />
               revive@revivecenterlb.com
             </motion.a>
           </div>
