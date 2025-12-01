@@ -234,16 +234,16 @@ export default function Navbar() {
             <span>961 81 366073</span>
           </a>
           <div className="ml-3 flex items-center gap-4 border-l border-white/20 pl-4 text-lg">
-            <Link aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61567047656511&mibextid=wwXIfr&rdid=xv0u7yEgNfvJ41Ax&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AS2z6e5Rq%2F%3Fmibextid%3DwwXIfr#" className="transition-transform hover:scale-105">
+            <Link aria-label="Facebook" href="https://www.facebook.com" className="transition-transform hover:scale-105">
               <Facebook size={18} />
             </Link>
-            <Link aria-label="Instagram" href="https://www.instagram.com/revive.wc/" className="transition-transform hover:scale-105">
+            <Link aria-label="Instagram" href="https://www.instagram.com" className="transition-transform hover:scale-105">
               <Instagram size={18} />
             </Link>
-            <Link aria-label="TikTok" href="https://www.tiktok.com/" target="_blank" className="transition-transform hover:scale-105" rel="noopener noreferrer">
+            <Link aria-label="TikTok" href="https://www.tiktok.com" target="_blank" className="transition-transform hover:scale-105" rel="noopener noreferrer">
               <SiTiktok className="h-[18px] w-[18px]" />
             </Link>
-            <Link aria-label="WhatsApp" href="https://wa.me/96181787727" target="_blank" className="transition-transform hover:scale-105" rel="noopener noreferrer">
+            <Link aria-label="WhatsApp" href="https://wa.me/96181366073" target="_blank" className="transition-transform hover:scale-105" rel="noopener noreferrer">
               <SiWhatsapp className="h-[18px] w-[18px]" />
             </Link>
           </div>
@@ -390,16 +390,16 @@ export default function Navbar() {
               </li>
             </ul>
             <a
-              href="tel:+96181787727"
+              href="tel:+96181366073"
               className="inline-flex items-center gap-2 rounded-full bg-[#DA0037] px-6 py-3 text-base text-white shadow-sm mx-6"
             >
               <Phone size={16} /> <span>961 81 787 727</span>
             </a>
             <div className={`flex items-center gap-5 border-t pt-4 text-lg mx-6 ${isContactPage || isCategoryPage ? "border-neutral-200 dark:border-neutral-700" : scrolled ? "border-neutral-200 dark:border-neutral-700" : "border-white/20"}`}>
-              <Link aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61567047656511&mibextid=wwXIfr&rdid=xv0u7yEgNfvJ41Ax&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AS2z6e5Rq%2F%3Fmibextid%3DwwXIfr#" className="transition-transform hover:scale-105"><Facebook size={20} /></Link>
-              <Link aria-label="Instagram" href="https://www.instagram.com/revive.wc/" className="transition-transform hover:scale-105"><Instagram size={20} /></Link>
-              <Link aria-label="TikTok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105"><SiTiktok className="h-[20px] w-[20px]" /></Link>
-              <Link aria-label="WhatsApp" href="https://wa.me/96181787727" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105"><SiWhatsapp className="h-[20px] w-[20px]" /></Link>
+              <Link aria-label="Facebook" href="https://www.facebook.com" className="transition-transform hover:scale-105"><Facebook size={20} /></Link>
+              <Link aria-label="Instagram" href="https://www.instagram.com" className="transition-transform hover:scale-105"><Instagram size={20} /></Link>
+              <Link aria-label="TikTok" href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105"><SiTiktok className="h-[20px] w-[20px]" /></Link>
+              <Link aria-label="WhatsApp" href="https://wa.me/96181366073" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105"><SiWhatsapp className="h-[20px] w-[20px]" /></Link>
             </div>
           </div>
         </motion.div>

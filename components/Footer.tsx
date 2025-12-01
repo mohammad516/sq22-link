@@ -147,10 +147,10 @@ const Footer = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <SocialIcon href="https://wa.me/96181787727?text=Hello" icon={FaWhatsapp} label="WhatsApp" delay={0} />
-            <SocialIcon href="https://www.facebook.com/profile.php?id=61567047656511&mibextid=wwXIfr&rdid=xv0u7yEgNfvJ41Ax&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AS2z6e5Rq%2F%3Fmibextid%3DwwXIfr#" icon={Facebook} label="Facebook" delay={0.1} />
-            <SocialIcon href="https://www.instagram.com/revive.wc/" icon={Instagram} label="Instagram" delay={0.2} />
-            <SocialIcon href="https://www.tiktok.com/" icon={FaTiktok} label="TikTok" delay={0.3} />
+            <SocialIcon href="https://wa.me/96181366073?text=Hello" icon={FaWhatsapp} label="WhatsApp" delay={0} />
+            <SocialIcon href="https://www.facebook.com" icon={Facebook} label="Facebook" delay={0.1} />
+            <SocialIcon href="https://www.instagram.com" icon={Instagram} label="Instagram" delay={0.2} />
+            <SocialIcon href="https://www.tiktok.com" icon={FaTiktok} label="TikTok" delay={0.3} />
           </motion.div>
           
           {/* Copyright and Email */}
@@ -162,7 +162,7 @@ const Footer = () => (
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              © {new Date().getFullYear()} ReviveWellnessCenter. Crafted with{" "}
+              © {new Date().getFullYear()} SquadLink. Crafted with{" "}
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -175,7 +175,7 @@ const Footer = () => (
             <div className="hidden lg:block text-neutral-300 dark:text-neutral-600">|</div>
             
             <motion.a 
-              href="mailto:revive@revivecenterlb.com" 
+              href="mailto:thesquadlinkcompany@gmail.com" 
               className="inline-flex items-center gap-2 text-sm text-[#171717] hover:text-[#DA0037] transition-all duration-300 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50 hover:underline"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -184,7 +184,7 @@ const Footer = () => (
               whileHover={{ scale: 1.05 }}
             >
               <Mail className="w-4 h-4 text-[#171717]" />
-              revive@revivecenterlb.com
+              thesquadlinkcompany@gmail.com
             </motion.a>
           </div>
         </div>

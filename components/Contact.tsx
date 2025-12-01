@@ -125,7 +125,7 @@ const HeroSection = () => {
             </motion.button>
             
             <motion.a
-              href="tel:+96181787727"
+              href="tel:+96181366073"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="group bg-white/90 backdrop-blur-sm text-[#171717] px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 border border-[#DA0037]/20 hover:text-[#DA0037]"
@@ -233,7 +233,7 @@ const ContactForm = () => {
     
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/96181787727?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/96181366073?text=${encodedMessage}`;
     
     // Open WhatsApp in a new tab
     window.open(whatsappUrl, '_blank');
@@ -449,10 +449,10 @@ const ContactForm = () => {
 
 const SocialIcons = () => {
   const socialLinks = [
-    { icon: SiWhatsapp, href: "https://wa.me/96181787727", label: "WhatsApp", gradient: "from-emerald-400 to-green-500" },
-    { icon: SiInstagram, href: "https://www.instagram.com/revive.wc/", label: "Instagram", gradient: "from-pink-400 to-purple-500" },
-    { icon: SiFacebook, href: "https://www.facebook.com/profile.php?id=61567047656511&mibextid=wwXIfr&rdid=xv0u7yEgNfvJ41Ax&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AS2z6e5Rq%2F%3Fmibextid%3DwwXIfr#", label: "Facebook", gradient: "from-blue-400 to-indigo-500" },
-    { icon: SiTiktok, href: "https://www.tiktok.com/", label: "TikTok", gradient: "from-slate-400 to-gray-500" }
+    { icon: SiWhatsapp, href: "https://wa.me/96181366073", label: "WhatsApp", gradient: "from-emerald-400 to-green-500" },
+    { icon: SiInstagram, href: "https://www.instagram.com", label: "Instagram", gradient: "from-pink-400 to-purple-500" },
+    { icon: SiFacebook, href: "https://www.facebook.com", label: "Facebook", gradient: "from-blue-400 to-indigo-500" },
+    { icon: SiTiktok, href: "https://www.tiktok.com", label: "TikTok", gradient: "from-slate-400 to-gray-500" }
   ];
 
   return (
