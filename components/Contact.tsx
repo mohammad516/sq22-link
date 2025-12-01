@@ -77,7 +77,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-bold uppercase tracking-wider text-[#DA0037] mb-8 shadow-lg"
           >
             <Heart className="w-4 h-4 text-[#DA0037]" />
-            <span>Premium Wellness Experience</span>
+            <span>Premium Uniform Solutions</span>
           </motion.div>
 
           <motion.h1 
@@ -104,8 +104,7 @@ const HeroSection = () => {
             className="text-xl md:text-2xl text-[#171717]/90 max-w-3xl mx-auto leading-relaxed mb-12 font-sans"
             style={{ fontFamily: 'var(--font-inter), sans-serif' }}
           >
-            Begin your journey to wellness and transformation. 
-            Our expert team is ready to guide you toward your best self.
+            Get in touch with us to discover our premium uniform solutions.
           </motion.p>
 
           <motion.div
@@ -526,7 +525,7 @@ const MapSection = () => {
           Find Us
         </h2>
         <p className="text-xl text-[#171717]/90 max-w-2xl mx-auto font-sans">
-          Visit our beautiful wellness center in Jounieh
+          Visit our Company in Tayouneh
         </p>
       </div>
       
@@ -536,7 +535,7 @@ const MapSection = () => {
         className="bg-white/70 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/50"
       >
      <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.422039374518!2d35.62294158241908!3d33.98169185232558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f409598e4444b%3A0x534c11b48433c3c8!2sNotre%20Dame%20University%20Hospital%20(NDUH)!5e0!3m2!1sen!2slb!4v1762264753337!5m2!1sen!2slb"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13250.933424395032!2d35.5139586!3d33.8707621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f170c53009f55%3A0x9ba0c21df9873b90!2sTayouneh%2C%20Beirut!5e0!3m2!1sen!2slb!4v1764594741283!5m2!1sen!2slb"
   width="100%"
   height="400"
   style={{ border: 0 }}
@@ -586,7 +585,13 @@ const Contact = () => {
                   <ContactInfoCard
                     icon={Phone}
                     title="Phone"
-                    content="+961 81 787 727"
+                    content={
+                      <>
+                        +961 81 366 073
+                        <br />+961 71 052 005
+                        <br />+961 01 386 604
+                      </>
+                    }
                     subtitle="Mon - Fri: 9:00 AM - 5:00 PM"
                     delay={0.1}
                   />
@@ -594,7 +599,7 @@ const Contact = () => {
                   <ContactInfoCard
                     icon={Mail}
                     title="Email"
-                    content="revive@revivecenterlb.com"
+                    content="thesquadlinkcompany@gmail.com"
                     subtitle="We respond within 24 hours"
                     delay={0.2}
                   />
@@ -604,10 +609,9 @@ const Contact = () => {
                     title="Address"
                     content={
                       <>
-                        Revive Wellness Center  
-                        <br />Notre Dame University Hospital  
-                        <br />8th Floor, GI F. Chehab Street  
-                        <br />Jounieh, Lebanon
+                        Squadlink  
+                          
+                        <br />Beirut-Tayouneh
                       </>
                     }
                     delay={0.3}

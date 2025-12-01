@@ -11,7 +11,7 @@ const features = [
     title: "Expertise",
   },
   {
-    icon: "/quality.jpg",
+    icon: "/quality2.png",
     title: "Quality",
   },
   {
@@ -19,7 +19,7 @@ const features = [
     title: "Unique Solutions",
   },
   {
-    icon: "/speed.jpg",
+    icon: "/speed2.png",
     title: "Speed",
   },
   {
