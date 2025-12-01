@@ -393,7 +393,7 @@ export default function Navbar() {
               href="tel:+96181366073"
               className="inline-flex items-center gap-2 rounded-full bg-[#DA0037] px-6 py-3 text-base text-white shadow-sm mx-6"
             >
-              <Phone size={16} /> <span>961 81 787 727</span>
+              <Phone size={16} /> <span>961 81 366 073</span>
             </a>
             <div className={`flex items-center gap-5 border-t pt-4 text-lg mx-6 ${isContactPage || isCategoryPage ? "border-neutral-200 dark:border-neutral-700" : scrolled ? "border-neutral-200 dark:border-neutral-700" : "border-white/20"}`}>
               <Link aria-label="Facebook" href="https://www.facebook.com" className="transition-transform hover:scale-105"><Facebook size={20} /></Link>
