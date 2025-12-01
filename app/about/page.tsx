@@ -1,12 +1,19 @@
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
-import AboutPage from "@/components/About";
 import Footer from "@/components/Footer";
+
+const AboutPage = dynamic(() => import("@/components/About"), {
+  loading: () => <div className="min-h-screen" />,
+});
 
 export default function About() {
   return (
     <main className="relative min-h-screen bg-white">
       <Navbar />
-      <AboutPage />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <AboutPage />
+      </Suspense>
       <Footer />
     </main>
   );

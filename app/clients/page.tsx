@@ -1,12 +1,19 @@
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
-import Client from "@/components/Client";
 import Footer from "@/components/Footer";
+
+const Client = dynamic(() => import("@/components/Client"), {
+  loading: () => <div className="min-h-screen" />,
+});
 
 export default function ClientPage() {
   return (
     <main className="relative min-h-screen bg-white">
       <Navbar />
-      <Client />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <Client />
+      </Suspense>
       <Footer />
     </main>
   );

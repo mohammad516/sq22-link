@@ -1,6 +1,6 @@
 // About page inspired by Contact.tsx style and AboutPreviewSection color palette
 "use client";
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Heart, Sparkles, Leaf, ChevronDown, HeartPulse, Brain, Building2, Shield, ShoppingBag, Briefcase, Car, Users } from "lucide-react";
 import Image from "next/image";
@@ -35,7 +35,7 @@ const HeroSection = () => {
           className="object-cover"
           priority
           sizes="100vw"
-          unoptimized
+          quality={85}
         />
         {/* Soft gradient overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
@@ -192,7 +192,7 @@ const VisionMissionSection = () => {
 
 // Wellness Philosophy Section
 const WellnessPhilosophySection = () => {
-  const philosophyItems = [
+  const philosophyItems = useMemo(() => [
     {
       icon: Building2,
       title: "Hotels & Restaurants"
@@ -217,7 +217,7 @@ const WellnessPhilosophySection = () => {
       icon: Users,
       title: "NGOs & Institutions"
     }
-  ];
+  ], []);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -277,7 +277,7 @@ const WellnessPhilosophySection = () => {
 
 // Customers Logos Section
 const CustomersLogosSection = () => {
-  const clientLogos = [
+  const clientLogos = useMemo(() => [
     "advanced.png",
     "alshams1.png",
     "allotaxi.png",
@@ -290,7 +290,7 @@ const CustomersLogosSection = () => {
     "metro.png",
     "pat.png",
     "sant.png",
-  ];
+  ], []);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -345,6 +345,7 @@ const CustomersLogosSection = () => {
                 alt={logo.replace(".png", "").replace(/_/g, " ")}
                 width={800}
                 height={320}
+                loading="lazy"
                 className="object-contain h-full w-auto opacity-90 group-hover:opacity-100 transition-all duration-500 grayscale-0 group-hover:scale-110 drop-shadow-md group-hover:drop-shadow-lg"
               />
             </motion.div>
@@ -561,9 +562,10 @@ const Client = () => {
                 src="/red.webp"
                 alt="Wellness Philosophy Background"
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="100vw"
-                unoptimized
+                quality={75}
               />
               {/* Gradient overlay for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#E7E9F8]/80 via-white/70 to-[#A7AEDC]/60"></div>

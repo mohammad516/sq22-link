@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 const clientLogos = [
   "advanced.png",
@@ -21,6 +21,9 @@ const clientLogos = [
 
 export default function ClientsCarousel() {
   const [isPaused, setIsPaused] = useState(false);
+  
+  const handleMouseEnter = useCallback(() => setIsPaused(true), []);
+  const handleMouseLeave = useCallback(() => setIsPaused(false), []);
 
   return (
     <section className="relative py-16 md:py-20 bg-white">
@@ -56,68 +59,56 @@ export default function ClientsCarousel() {
         {/* Carousel Container */}
         <div
           className="relative overflow-hidden"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {/* Scrolling Logos */}
           <div className="flex items-center h-48 md:h-64 lg:h-80">
-            {/* First Set */}
-            <motion.div
-              className="flex gap-8 md:gap-12 lg:gap-16 flex-shrink-0 items-center h-full"
-              animate={{
-                x: isPaused ? "0%" : "-50%",
-              }}
-              transition={{
-                duration: 35,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "linear",
+            {/* Wrapper for seamless infinite scroll */}
+            <div
+              className={`flex gap-8 md:gap-12 lg:gap-16 flex-shrink-0 items-center h-full carousel-scroll ${isPaused ? 'paused' : ''}`}
+              style={{
+                width: "200%",
               }}
             >
-              {clientLogos.map((logo, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="flex-shrink-0 h-full w-auto relative flex items-center justify-center"
-                >
-                  <Image
-                    src={`/customers logo/${logo}`}
-                    alt={logo.replace(".png", "")}
-                    width={800}
-                    height={320}
-                    className="object-contain h-full w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              ))}
-            </motion.div>
+              {/* First Set */}
+              <div className="flex gap-8 md:gap-12 lg:gap-16 flex-shrink-0 items-center h-full">
+                {clientLogos.map((logo, index) => (
+                  <div
+                    key={`first-${index}`}
+                    className="flex-shrink-0 h-full w-auto relative flex items-center justify-center"
+                  >
+                    <Image
+                      src={`/customers logo/${logo}`}
+                      alt={logo.replace(".png", "")}
+                      width={800}
+                      height={320}
+                      loading="lazy"
+                      className="object-contain h-full w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
 
-            {/* Second Set (for seamless loop) */}
-            <motion.div
-              className="flex gap-8 md:gap-12 lg:gap-16 flex-shrink-0 items-center h-full"
-              animate={{
-                x: isPaused ? "0%" : "-50%",
-              }}
-              transition={{
-                duration: 35,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "linear",
-              }}
-            >
-              {clientLogos.map((logo, index) => (
-                <div
-                  key={`second-${index}`}
-                  className="flex-shrink-0 h-full w-auto relative flex items-center justify-center"
-                >
-                  <Image
-                    src={`/customers logo/${logo}`}
-                    alt={logo.replace(".png", "")}
-                    width={800}
-                    height={320}
-                    className="object-contain h-full w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              ))}
-            </motion.div>
+              {/* Second Set (for seamless loop) */}
+              <div className="flex gap-8 md:gap-12 lg:gap-16 flex-shrink-0 items-center h-full">
+                {clientLogos.map((logo, index) => (
+                  <div
+                    key={`second-${index}`}
+                    className="flex-shrink-0 h-full w-auto relative flex items-center justify-center"
+                  >
+                    <Image
+                      src={`/customers logo/${logo}`}
+                      alt={logo.replace(".png", "")}
+                      width={800}
+                      height={320}
+                      loading="lazy"
+                      className="object-contain h-full w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -134,6 +125,20 @@ export default function ClientsCarousel() {
         .animate-gradient {
           background-size: 200% 200%;
           animation: gradient 3s ease infinite;
+        }
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .carousel-scroll {
+          animation: scroll 35s linear infinite;
+        }
+        .carousel-scroll.paused {
+          animation-play-state: paused;
         }
       `}</style>
     </section>
