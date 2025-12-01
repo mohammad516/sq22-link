@@ -84,10 +84,35 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#171717] mb-6 leading-tight font-serif tracking-wide"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight font-serif tracking-wide relative"
             style={{ fontFamily: 'var(--font-playfair), serif' }}
           >
-            Contact Us
+            <motion.span
+              className="block"
+              animate={{
+                color: ["#171717", "#DA0037", "#171717"],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              Contact Us
+            </motion.span>
+            {/* Glow effect behind text */}
+            <motion.div
+              className="absolute inset-0 blur-2xl sm:blur-3xl bg-gradient-to-r from-[#DA0037]/40 via-[#DA0037]/40 to-[#DA0037]/40 sm:from-[#DA0037]/40 sm:via-[#DA0037]/40 sm:to-[#DA0037]/40 -z-10"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.4, 0.6, 0.4],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
           </motion.h1>
           
           <motion.div

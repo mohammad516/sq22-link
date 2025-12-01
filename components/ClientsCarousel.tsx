@@ -5,18 +5,18 @@ import Image from "next/image";
 import { useState } from "react";
 
 const clientLogos = [
-  "ADVANCED CAR RENT.png",
-  "AL SHAMS ANJAR RESTAURANT.png",
-  "ALLO TAXI.png",
-  "AOUN FOOD.png",
-  "BLACK METAL SECURITY.png",
-  "CARREFOUR.png",
-  "CREMINO.png",
-  "EM SHERIF.png",
-  "HOLA DELIVERY COMMPANY.png",
-  "METROPOLITAN SECURITY.png",
-  "PATCHI.png",
-  "SAINT GOERGE SHCOOL.png",
+  "advanced.png",
+  "alshams1.png",
+  "allotaxi.png",
+  "aoun.png",
+  "black.png",
+  "carr.png",
+  "cremino1.png",
+  "emsherif.png",
+  "hola.png",
+  "metro.png",
+  "pat.png",
+  "sant.png",
 ];
 
 export default function ClientsCarousel() {

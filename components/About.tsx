@@ -45,9 +45,34 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           style={{ y: headingY }}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#EDEDED] leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+          className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight relative"
         >
-          About Us
+          <motion.span
+            className="block text-white"
+            animate={{
+              color: ["#FFFFFF", "#DA0037", "#FFFFFF"],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            About Us
+          </motion.span>
+          {/* Glow effect behind text */}
+          <motion.div
+            className="absolute inset-0 blur-2xl sm:blur-3xl bg-gradient-to-r from-[#DA0037]/40 via-[#DA0037]/40 to-[#DA0037]/40 sm:from-[#DA0037]/40 sm:via-[#DA0037]/40 sm:to-[#DA0037]/40 -z-10"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.4, 0.6, 0.4],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
         </motion.h1>
       </div>
 

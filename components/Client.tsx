@@ -48,9 +48,34 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           style={{ y: headingY }}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#EDEDED] leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+          className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight relative"
         >
-          Our Clients
+          <motion.span
+            className="block text-white"
+            animate={{
+              color: ["#FFFFFF", "#DA0037", "#FFFFFF"],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            Our Clients
+          </motion.span>
+          {/* Glow effect behind text */}
+          <motion.div
+            className="absolute inset-0 blur-2xl sm:blur-3xl bg-gradient-to-r from-[#DA0037]/40 via-[#DA0037]/40 to-[#DA0037]/40 sm:from-[#DA0037]/40 sm:via-[#DA0037]/40 sm:to-[#DA0037]/40 -z-10"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.4, 0.6, 0.4],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
         </motion.h1>
       </div>
 
@@ -253,18 +278,18 @@ const WellnessPhilosophySection = () => {
 // Customers Logos Section
 const CustomersLogosSection = () => {
   const clientLogos = [
-    "ADVANCED CAR RENT.png",
-    "AL SHAMS ANJAR RESTAURANT.png",
-    "ALLO TAXI.png",
-    "AOUN FOOD.png",
-    "BLACK METAL SECURITY.png",
-    "CARREFOUR.png",
-    "CREMINO.png",
-    "EM SHERIF.png",
-    "HOLA DELIVERY COMMPANY.png",
-    "METROPOLITAN SECURITY.png",
-    "PATCHI.png",
-    "SAINT GOERGE SHCOOL.png",
+    "advanced.png",
+    "alshams1.png",
+    "allotaxi.png",
+    "aoun.png",
+    "black.png",
+    "carr.png",
+    "cremino1.png",
+    "emsherif.png",
+    "hola.png",
+    "metro.png",
+    "pat.png",
+    "sant.png",
   ];
 
   const ref = useRef(null);
@@ -296,7 +321,7 @@ const CustomersLogosSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#DA0037] to-transparent mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {clientLogos.map((logo, index) => (
             <motion.div
               key={logo}
@@ -313,35 +338,15 @@ const CustomersLogosSection = () => {
                 scale: 1.08,
                 transition: { duration: 0.3 }
               }}
-              className="group relative"
+              className="group relative flex items-center justify-center h-48 md:h-64 lg:h-80"
             >
-              <div className="relative bg-[#F5F5F5] rounded-2xl p-3 md:p-4 lg:p-5 shadow-xl border-2 border-[#EDEDED] hover:border-[#DA0037]/40 hover:shadow-2xl transition-all duration-500 overflow-hidden flex items-center justify-center">
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#DA0037]/10 via-transparent to-[#DA0037]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                {/* Animated border on hover */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#DA0037]/50 transition-all duration-500"></div>
-                
-                {/* Logo Container - Much Larger */}
-                <div className="relative z-10 w-full h-full flex items-center justify-center">
-                  <div className="relative w-full h-36 md:h-44 lg:h-52 xl:h-56 flex items-center justify-center">
-                    <Image
-                      src={`/customers logo/${logo}`}
-                      alt={logo.replace(".png", "").replace(/_/g, " ")}
-                      width={800}
-                      height={400}
-                      className="object-contain w-full h-full max-w-full max-h-full opacity-90 group-hover:opacity-100 transition-all duration-500 grayscale-0 group-hover:scale-105 drop-shadow-md group-hover:drop-shadow-lg"
-                      style={{
-                        mixBlendMode: 'multiply',
-                        filter: 'contrast(1.1) brightness(0.98)',
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* Shine effect on hover */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-              </div>
+              <Image
+                src={`/customers logo/${logo}`}
+                alt={logo.replace(".png", "").replace(/_/g, " ")}
+                width={800}
+                height={320}
+                className="object-contain h-full w-auto opacity-90 group-hover:opacity-100 transition-all duration-500 grayscale-0 group-hover:scale-110 drop-shadow-md group-hover:drop-shadow-lg"
+              />
             </motion.div>
           ))}
         </div>
