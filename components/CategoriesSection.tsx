@@ -209,24 +209,38 @@ export default function CategoriesSection() {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 -translate-x-2 md:translate-x-0"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white active:bg-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 -translate-x-2 md:translate-x-0 touch-manipulation pointer-events-auto"
             aria-label="Previous"
+            style={{
+              minWidth: '44px',
+              minHeight: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
           >
-            <ChevronLeft className="w-7 h-7 md:w-8 md:h-8 text-[#DA0037]" />
+            <ChevronLeft className="w-7 h-7 md:w-8 md:h-8 text-[#DA0037] pointer-events-none" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 translate-x-2 md:translate-x-0"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white active:bg-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 translate-x-2 md:translate-x-0 touch-manipulation pointer-events-auto"
             aria-label="Next"
+            style={{
+              minWidth: '44px',
+              minHeight: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
           >
-            <ChevronRight className="w-7 h-7 md:w-8 md:h-8 text-[#DA0037]" />
+            <ChevronRight className="w-7 h-7 md:w-8 md:h-8 text-[#DA0037] pointer-events-none" />
           </button>
 
           {/* Carousel Container */}
           <div 
             ref={carouselRef}
-            className="overflow-hidden"
+            className="overflow-hidden relative"
           >
             <motion.div
               className="flex"
