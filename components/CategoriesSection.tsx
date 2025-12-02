@@ -2,8 +2,8 @@
 
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
-import { X } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = [
   {
@@ -107,7 +107,10 @@ const labelVariants = {
 
 export default function CategoriesSection() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(4);
   const sectionRef = useRef<HTMLElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -117,6 +120,43 @@ export default function CategoriesSection() {
   const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
   const selectedCategoryData = categories.find(cat => cat.id === selectedCategory);
+
+  // Update items per view based on screen size
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setItemsPerView(1); // Mobile: 1 item
+      } else if (width < 1024) {
+        setItemsPerView(2); // Tablet: 2 items
+      } else if (width < 1280) {
+        setItemsPerView(3); // Small desktop: 3 items
+      } else {
+        setItemsPerView(4); // Large desktop: 4 items
+      }
+    };
+
+    updateItemsPerView();
+    window.addEventListener('resize', updateItemsPerView);
+    return () => window.removeEventListener('resize', updateItemsPerView);
+  }, []);
+
+  const maxIndex = Math.max(0, categories.length - itemsPerView);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
+  };
+
+  // Auto-reset index when itemsPerView changes
+  useEffect(() => {
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(maxIndex);
+    }
+  }, [itemsPerView, maxIndex, currentIndex]);
 
   return (
     <section 
@@ -164,61 +204,77 @@ export default function CategoriesSection() {
           </motion.h2>
         </motion.div>
 
-        {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-6">
-          {categories.map((category, index) => {
-            const getGridClasses = () => {
-              if (category.position === "col-1-row-1") {
-                return "md:aspect-square md:col-start-1 md:row-start-1";
-              }
-              if (category.position === "col-1-row-2") {
-                return "md:aspect-square md:col-start-1 md:row-start-2";
-              }
-              if (category.position === "col-2-row-1") {
-                return "md:aspect-square md:col-start-2 md:row-start-1";
-              }
-              if (category.position === "col-2-row-2") {
-                return "md:aspect-square md:col-start-2 md:row-start-2";
-              }
-              if (category.position === "col-3-row-1") {
-                return "md:aspect-square md:col-start-3 md:row-start-1";
-              }
-              if (category.position === "col-3-row-2") {
-                return "md:aspect-square md:col-start-3 md:row-start-2";
-              }
-              return "md:aspect-square";
-            };
-            
-            return (
-              <motion.div
-                key={category.id}
-                custom={index}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                whileHover="hover"
-                variants={cardVariants}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`
-                  relative overflow-hidden bg-[#EEE3CB]
-                  aspect-[4/5] 
-                  ${getGridClasses()}
-                  group cursor-pointer
-                  shadow-lg hover:shadow-2xl
-                  transition-shadow duration-300
-                `}
-              >
+        {/* Categories Carousel */}
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300 -translate-x-2 md:translate-x-0"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-[#DA0037]" />
+          </button>
+          
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300 translate-x-2 md:translate-x-0"
+            aria-label="Next"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-[#DA0037]" />
+          </button>
+
+          {/* Carousel Container */}
+          <div 
+            ref={carouselRef}
+            className="overflow-hidden"
+          >
+            <motion.div
+              className="flex"
+              animate={{
+                x: `-${currentIndex * (100 / itemsPerView)}%`,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              {categories.map((category, index) => {
+                const gap = itemsPerView === 1 ? 0 : itemsPerView === 2 ? 8 : itemsPerView === 3 ? 16 : 24;
+                return (
+                  <motion.div
+                    key={category.id}
+                    custom={index}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    whileHover="hover"
+                    variants={cardVariants}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`
+                      relative overflow-hidden bg-[#EEE3CB]
+                      aspect-[4/5]
+                      flex-shrink-0
+                      group cursor-pointer
+                      shadow-lg hover:shadow-2xl
+                      transition-shadow duration-300
+                    `}
+                    style={{
+                      width: `calc(${100 / itemsPerView}% - ${gap * (itemsPerView - 1) / itemsPerView}px)`,
+                      marginRight: index < categories.length - 1 ? `${gap}px` : '0',
+                    }}
+                  >
 
                 {/* Image with parallax effect */}
                 <motion.div
                   variants={imageVariants}
-                  className="absolute inset-0 z-10"
+                  className="absolute inset-0 z-10 flex items-center justify-center"
                 >
                   <Image
                     src={category.image}
                     alt={category.title}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     style={{ objectPosition: 'center' }}
                   />
                 </motion.div>
@@ -272,9 +328,27 @@ export default function CategoriesSection() {
                     }}
                   />
                 ))}
-              </motion.div>
-            );
-          })}
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+
+          {/* Dots Indicator for Mobile */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            {Array.from({ length: categories.length }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? "w-8 bg-[#DA0037]"
+                    : "w-2 bg-gray-300"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 

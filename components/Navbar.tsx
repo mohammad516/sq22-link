@@ -65,32 +65,70 @@ export default function Navbar() {
         }`}
       >
         {/* Left: Logo + Name */}
-        <div className="flex items-center">
-          <div
-            className={`flex items-center justify-center rounded-2xl p-1.5 transition-all ${
+        <div className="flex items-center relative">
+          {/* Glow effect for dark backgrounds */}
+          {!isContactPage && !isCategoryPage && !scrolled && (
+            <div 
+              className="absolute inset-0 pointer-events-none flex items-center justify-center"
+              style={{
+                zIndex: 0
+              }}
+            >
+              {/* Glow layers */}
+              <div 
+                className="absolute"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  filter: 'blur(25px)',
+                  transform: 'scale(1.6)',
+                  opacity: 0.9,
+                  background: 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 50%, transparent 100%)',
+                }}
+              />
+              <div 
+                className="absolute"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  filter: 'blur(15px)',
+                  transform: 'scale(1.3)',
+                  opacity: 0.7,
+                }}
+              >
+                <Image
+                  src="/logo3.png"
+                  alt=""
+                  width={150}
+                  height={150}
+                  className="h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 xl:h-44 xl:w-44 object-contain brightness-[3] contrast-150"
+                  aria-hidden="true"
+                  unoptimized
+                />
+              </div>
+            </div>
+          )}
+          <Image
+            src="/logo3.png"
+            alt="Squadlink Logo"
+            width={150}
+            height={150}
+            priority
+            sizes="(max-width: 768px) 112px, (max-width: 1024px) 128px, (max-width: 1280px) 160px, 176px"
+            className={`${
               isContactPage || isCategoryPage
-                ? "bg-gradient-to-br from-[#DA0037]/15 to-transparent shadow-sm ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
+                ? "h-24 w-24 md:h-28 md:w-28 lg:h-36 lg:w-36 xl:h-40 xl:w-40"
                 : scrolled
-                ? "bg-gradient-to-br from-[#DA0037]/15 to-transparent shadow-sm ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
-                : "bg-white shadow-md ring-1 ring-white/20"
+                ? "h-24 w-24 md:h-28 md:w-28 lg:h-36 lg:w-36 xl:h-40 xl:w-40"
+                : "h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 xl:h-44 xl:w-44"
+            } object-contain transition-all duration-300 relative z-10 ${
+              isContactPage || isCategoryPage
+                ? ""
+                : scrolled
+                ? ""
+                : "drop-shadow-[0_0_25px_rgba(255,255,255,1)] drop-shadow-[0_0_50px_rgba(255,255,255,0.8)] drop-shadow-[0_0_75px_rgba(255,255,255,0.5)]"
             }`}
-          >
-            <Image
-              src="/logo.png"
-              alt="Squadlink Logo"
-              width={100}
-              height={100}
-              priority
-              sizes="(max-width: 768px) 60px, (max-width: 1024px) 80px, 100px"
-              className={`${
-                isContactPage || isCategoryPage
-                  ? "h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16"
-                  : scrolled
-                  ? "h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16"
-                  : "h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
-              } rounded-lg object-cover transition-[width,height] duration-300`}
-            />
-          </div>
+          />
         </div>
 
         {/* Center: Links (desktop) */}
@@ -275,7 +313,7 @@ export default function Navbar() {
         >
           <div className="space-y-6 px-6 pb-8 pt-4">
             <div className="flex items-center justify-center py-2">
-              <Image src="/logo.png" alt="Revive Wellness Center" width={64} height={64} className="h-14 w-14 rounded-full object-cover" />
+              <Image src="/logo3.png" alt="Squadlink Logo" width={140} height={140} className="h-28 w-28 object-contain" />
             </div>
             <ul className={`divide-y ${isContactPage || isCategoryPage ? "divide-neutral-200 dark:divide-neutral-700" : scrolled ? "divide-neutral-200 dark:divide-neutral-700" : "divide-white/20"}`}>
               <li>

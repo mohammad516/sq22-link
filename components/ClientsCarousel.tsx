@@ -63,7 +63,7 @@ export default function ClientsCarousel() {
           onMouseLeave={handleMouseLeave}
         >
           {/* Scrolling Logos */}
-          <div className="flex items-center h-48 md:h-64 lg:h-80">
+          <div className="flex items-center h-[150px] md:h-[200px] lg:h-[260px]">
             {/* Wrapper for seamless infinite scroll */}
             <div
               className={`flex gap-8 md:gap-12 lg:gap-16 flex-shrink-0 items-center h-full carousel-scroll ${isPaused ? 'paused' : ''}`}

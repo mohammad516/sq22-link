@@ -122,21 +122,17 @@ const Footer = () => (
             transition={{ duration: 0.6 }}
             whileHover={{ 
               scale: 1.05,
-              filter: "drop-shadow(0 0 25px rgba(8, 217, 214, 0.4))"
+              filter: "drop-shadow(0 0 25px rgba(218, 0, 55, 0.4))"
             }}
           >
-            <div className="relative p-2 rounded-2xl bg-gradient-to-br from-white/80 to-[#EDEDED]/50 backdrop-blur-sm border border-white/30 shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <Image 
-                src="/logo.png" 
-                alt="Squadlink Logo" 
-                width={80}
-                height={80}
-                className="h-16 w-16 sm:h-18 sm:w-18 md:h-20 md:w-20 lg:h-20 lg:w-20 object-contain transition-all duration-300 group-hover:scale-110"
-                priority
-              />
-              {/* Animated glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#DA0037]/20 to-[#DA0037]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
-            </div>
+            <Image 
+              src="/logo3.png" 
+              alt="Squadlink Logo" 
+              width={180}
+              height={180}
+              className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44 object-contain transition-all duration-300 group-hover:scale-110"
+              priority
+            />
           </motion.div>
           
           {/* Social Media Icons */}
