@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
 export default function DeliverySection() {
-  const text = "We Deliver All Over The World";
+  const text = "Shipping  🌍 Worldwide";
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const currentIndexRef = useRef(0);
