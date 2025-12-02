@@ -11,6 +11,9 @@ const FeaturesSection = dynamic(() => import("@/components/FeaturesSection"), {
 const CategoriesSection = dynamic(() => import("@/components/CategoriesSection"), {
   loading: () => <div className="min-h-[400px]" />,
 });
+const DeliverySection = dynamic(() => import("@/components/DeliverySection"), {
+  loading: () => <div className="min-h-[150px]" />,
+});
 const ClientsCarousel = dynamic(() => import("@/components/ClientsCarousel"), {
   loading: () => <div className="min-h-[200px]" />,
 });
@@ -25,6 +28,9 @@ export default function HomePage() {
       </Suspense>
       <Suspense fallback={<div className="min-h-[400px]" />}>
         <CategoriesSection />
+      </Suspense>
+      <Suspense fallback={<div className="min-h-[150px]" />}>
+        <DeliverySection />
       </Suspense>
       <Suspense fallback={<div className="min-h-[200px]" />}>
         <ClientsCarousel />

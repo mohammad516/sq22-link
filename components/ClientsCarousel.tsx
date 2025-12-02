@@ -28,10 +28,10 @@ const clientLogos = [
 ];
 
 export default function ClientsCarousel() {
-  const trackRef = useRef(null);      // يحتوي المجموعتين
-  const groupRef = useRef(null);      // يشير للمجموعة الأولى (لقياس العرض)
-  const rafRef = useRef(null);
-  const lastTimeRef = useRef(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);      // يحتوي المجموعتين
+  const groupRef = useRef<HTMLDivElement | null>(null);      // يشير للمجموعة الأولى (لقياس العرض)
+  const rafRef = useRef<number | null>(null);
+  const lastTimeRef = useRef<number | null>(null);
   const offsetRef = useRef(0);        // مقدار التحريك الحالي بالبيكسل
   const [isPaused, setIsPaused] = useState(false);
   const [groupWidth, setGroupWidth] = useState(0);
@@ -80,7 +80,7 @@ export default function ClientsCarousel() {
     if (!groupWidth) return; // لا تبدأ حتى نعرف عرض المجموعة
 
     lastTimeRef.current = null;
-    const step = (time) => {
+    const step = (time: number) => {
       if (isPaused) {
         lastTimeRef.current = time;
         rafRef.current = requestAnimationFrame(step);
