@@ -44,7 +44,8 @@ export default function Hero() {
             className="absolute inset-0"
             initial={false}
             animate={{ opacity: idx === current ? 1 : 0, scale: idx === current ? 1 : 1.02 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            style={{ willChange: 'opacity, transform' }}
           >
             <Image
               src={src}
@@ -72,6 +73,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
+        style={{ willChange: 'opacity' }}
       />
 
       {/* Floating particles effect - reduced on mobile for performance */}
@@ -81,8 +83,6 @@ export default function Hero() {
           { width: 200, height: 180, left: 50, top: 40, x: -8, duration: 4, delay: 0.5 },
           { width: 120, height: 160, left: 80, top: 60, x: 10, duration: 3.8, delay: 1 },
           { width: 180, height: 200, left: 20, top: 70, x: -5, duration: 4.2, delay: 1.5 },
-          { width: 160, height: 140, left: 70, top: 30, x: 8, duration: 3.6, delay: 0.8 },
-          { width: 190, height: 170, left: 40, top: 50, x: -10, duration: 4.5, delay: 1.2 },
         ].map((particle, i) => (
           <motion.div
             key={i}
@@ -92,6 +92,7 @@ export default function Hero() {
               height: `${particle.height}px`,
               left: `${particle.left}%`,
               top: `${particle.top}%`,
+              willChange: 'transform, opacity',
             }}
             animate={{
               y: [0, -30, 0],
@@ -107,8 +108,8 @@ export default function Hero() {
             }}
           />
         ))}
-        {/* Simplified particles for mobile */}
-        {[...Array(3)].map((_, i) => (
+        {/* Simplified particles for mobile - reduced to 2 */}
+        {[...Array(2)].map((_, i) => (
           <motion.div
             key={`mobile-${i}`}
             className="absolute rounded-full bg-gradient-to-br from-[#DA0037]/15 to-[#DA0037]/15 blur-lg sm:hidden"
@@ -117,6 +118,7 @@ export default function Hero() {
               height: `${60 + i * 20}px`,
               left: `${20 + i * 30}%`,
               top: `${30 + i * 20}%`,
+              willChange: 'transform, opacity',
             }}
             animate={{
               y: [0, -20, 0],
@@ -146,6 +148,7 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: 'transform, opacity' }}
         />
         <div className="absolute left-1/2 top-1/2 z-[-1] h-[75%] sm:h-[80%] w-[100%] sm:w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#DA0037]/8 via-[#DA0037]/8 to-[#DA0037]/8 sm:from-[#DA0037]/5 sm:via-[#DA0037]/5 sm:to-[#DA0037]/5 blur-2xl sm:blur-3xl" />
 
@@ -199,6 +202,7 @@ export default function Hero() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
+              style={{ willChange: 'transform, opacity' }}
             />
           </motion.h1>
           

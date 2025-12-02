@@ -209,18 +209,18 @@ export default function CategoriesSection() {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300 -translate-x-2 md:translate-x-0"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 -translate-x-2 md:translate-x-0"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-[#DA0037]" />
+            <ChevronLeft className="w-7 h-7 md:w-8 md:h-8 text-[#DA0037]" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all duration-300 translate-x-2 md:translate-x-0"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white rounded-full p-3 md:p-4 shadow-lg hover:shadow-xl transition-all duration-300 translate-x-2 md:translate-x-0"
             aria-label="Next"
           >
-            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-[#DA0037]" />
+            <ChevronRight className="w-7 h-7 md:w-8 md:h-8 text-[#DA0037]" />
           </button>
 
           {/* Carousel Container */}
@@ -375,15 +375,22 @@ export default function CategoriesSection() {
             >
               <motion.div
                 onClick={(e) => e.stopPropagation()}
-                className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 md:p-10"
+                className="relative bg-white rounded-2xl sm:rounded-2xl shadow-2xl max-w-2xl w-full p-6 sm:p-8 md:p-10 max-h-[90vh] sm:max-h-[85vh] overflow-y-auto"
               >
-                {/* Close Button */}
+                {/* Close Button - Mobile Optimized */}
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-[#EDEDED] transition-colors"
+                  className="absolute top-3 right-3 sm:top-4 sm:right-4 p-3 sm:p-3 md:p-4 rounded-full bg-white/90 hover:bg-[#EDEDED] active:bg-[#DA0037]/10 transition-all duration-200 touch-manipulation shadow-lg hover:shadow-xl z-50"
                   aria-label="Close"
+                  style={{
+                    minWidth: '44px',
+                    minHeight: '44px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
                 >
-                  <X className="w-6 h-6 text-[#171717]" />
+                  <X className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 text-[#171717] sm:text-[#171717]" />
                 </button>
 
                 {/* Category Image */}
