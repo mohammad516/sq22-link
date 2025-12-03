@@ -84,8 +84,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight font-serif tracking-wide relative"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
+            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-wide relative"
           >
             <motion.span
               className="block"
@@ -97,8 +96,8 @@ const HeroSection = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            >
-              Contact Us
+          >
+            Contact Us
             </motion.span>
             {/* Glow effect behind text */}
             <motion.div
@@ -126,8 +125,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-xl md:text-2xl text-[#171717]/90 max-w-3xl mx-auto leading-relaxed mb-12 font-sans"
-            style={{ fontFamily: 'var(--font-inter), sans-serif' }}
+            className="text-xl md:text-2xl text-[#171717]/90 max-w-3xl mx-auto leading-relaxed mb-12"
           >
             Get in touch with us to discover our premium uniform solutions.
           </motion.p>
@@ -214,7 +212,7 @@ const ContactInfoCard = ({ icon: Icon, title, content, subtitle, delay = 0 }: {
           <h3 className="text-xl font-semibold text-[#171717] mb-2 group-hover:text-[#DA0037] transition-colors duration-300">
             {title}
           </h3>
-          <div className="text-[#171717]/90 leading-relaxed font-sans">
+          <div className="text-[#171717]/90 leading-relaxed">
             {content}
           </div>
           {subtitle && (
@@ -295,12 +293,11 @@ const ContactForm = () => {
             <Send className="w-8 h-8 text-white" />
           </motion.div>
           <h2 
-            className="text-3xl md:text-4xl font-bold text-[#171717] mb-4 font-serif tracking-wide"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
+            className="text-3xl md:text-4xl font-bold text-[#171717] mb-4 tracking-wide"
           >
             Send us a Message
           </h2>
-          <p className="text-[#171717]/90 text-lg font-sans">
+          <p className="text-[#171717]/90 text-lg">
             We&apos;ll get back to you within 24 hours
           </p>
         </div>
@@ -324,7 +321,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 whileFocus={{ scale: 1.02 }}
-                className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50 font-sans"
+                className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50"
                 placeholder="Your full name"
               />
             </motion.div>
@@ -346,7 +343,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 whileFocus={{ scale: 1.02 }}
-                className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50 font-sans"
+                className="w-full px-4 py-4 rounded-2xl border-2 border-[#DA0037]/20 focus:border-[#DA0037] focus:ring-4 focus:ring-[#DA0037]/10 transition-all duration-300 bg-white/50 focus:bg-white text-lg placeholder-[#EDEDED]/50"
                 placeholder="your@email.com"
               />
             </motion.div>
@@ -450,10 +447,10 @@ const ContactForm = () => {
             >
               <CheckCircle2 className="w-8 h-8 text-white" />
             </motion.div>
-            <h3 className="text-2xl font-bold font-serif text-[#171717] mb-2 tracking-wide">
+            <h3 className="text-2xl font-bold text-[#171717] mb-2 tracking-wide">
               Message Sent!
             </h3>
-            <p className="text-[#171717]/90 mb-6 font-sans">
+            <p className="text-[#171717]/90 mb-6">
               Thank you for reaching out! We&apos;ll get back to you within 24 hours.
             </p>
             <motion.button
@@ -488,8 +485,7 @@ const SocialIcons = () => {
       className="text-center"
     >
       <h3 
-        className="text-2xl font-bold font-serif text-[#171717] mb-8 tracking-wide"
-        style={{ fontFamily: 'var(--font-playfair), serif' }}
+        className="text-2xl font-bold text-[#171717] mb-8 tracking-wide"
       >
         Connect With Us
       </h3>
@@ -544,12 +540,11 @@ const MapSection = () => {
           <MapPin className="w-8 h-8 text-white" />
         </motion.div>
         <h2 
-          className="text-4xl font-bold font-serif text-[#171717] mb-4 tracking-wide"
-          style={{ fontFamily: 'var(--font-playfair), serif' }}
+          className="text-4xl font-bold text-[#171717] mb-4 tracking-wide"
         >
           Find Us
         </h2>
-        <p className="text-xl text-[#171717]/90 max-w-2xl mx-auto font-sans">
+        <p className="text-xl text-[#171717]/90 max-w-2xl mx-auto">
           Visit our Company in Tayouneh
         </p>
       </div>
@@ -600,8 +595,7 @@ const Contact = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h2 
-                  className="text-4xl font-bold font-serif text-[#171717] mb-12 tracking-wide"
-                  style={{ fontFamily: 'var(--font-playfair), serif' }}
+                  className="text-4xl font-bold text-[#171717] mb-12 tracking-wide"
                 >
                   Get in Touch
                 </h2>

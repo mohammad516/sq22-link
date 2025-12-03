@@ -9,7 +9,7 @@ const categories = [
   {
     id: "Premium Polo Shirts",
     title: "Premium Polo Shirts",
-    image: "/1-3.png",
+    image: "/polo.jpeg",
     gradient: "from-[#DA0037] via-[#DA0037] to-[#DA0037]",
     position: "col-2-row-1", // Center top
     description: "High-quality polos designed for comfort, durability, and a sharp uniform look. Available with custom embroidery and full color options.",
@@ -17,7 +17,7 @@ const categories = [
   {
     id: "Executive Shirts",
     title: "Executive Shirts",
-    image: "/3-6.png",
+    image: "/shirts.jpeg",
     gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-3-row-1", // Top right
     description: "Elegant, tailored shirts made for hotels, reception teams, and corporate staff. Premium fabrics and flawless finishing for a polished appearance.",
@@ -33,7 +33,7 @@ const categories = [
   {
     id: "Chef Jackets",
     title: "Chef Jackets",
-    image: "/1-5.png",
+    image: "/chef.jpeg",
     gradient: "from-[#DA0037] to-[#DA0037]",
     position: "col-3-row-2", // Bottom right
     description: "Professional chef coats crafted for heat, comfort, and long work hours. Stylish cuts with durable stitching and breathable materials.",

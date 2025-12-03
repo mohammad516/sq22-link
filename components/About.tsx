@@ -137,7 +137,7 @@ const IntroductionSection = () => {
               What We Do
             </p>
             <h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#171717] mb-8 tracking-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#DA0037] mb-8 tracking-tight"
             >
               Quality & Excellence
             </h2>
@@ -181,7 +181,7 @@ const WhoWeAreSection = () => {
               About Us
             </p>
             <h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#171717] mb-8 tracking-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#DA0037] mb-8 tracking-tight"
             >
               Who We Are
             </h2>
@@ -273,8 +273,7 @@ const WhyChooseSection = () => {
           className="text-center mb-16"
         >
           <h2 
-            className="text-4xl md:text-5xl font-bold text-[#171717] mb-4 font-serif tracking-wide"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
+            className="text-4xl md:text-5xl font-bold text-[#171717] mb-4 tracking-wide"
           >
             Why Choose Squad Link
           </h2>
@@ -299,7 +298,7 @@ const WhyChooseSection = () => {
               >
                 <feature.icon className="w-7 h-7 text-white" />
               </motion.div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#171717] mb-4 font-sans tracking-wide">
+              <h3 className="text-xl md:text-2xl font-bold text-[#171717] mb-4 tracking-wide">
                 {feature.title}
               </h3>
               <p className="text-[#444444] leading-relaxed">

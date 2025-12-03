@@ -119,12 +119,11 @@ const VisionMissionSection = () => {
           className="text-center mb-16"
         >
           <h2 
-            className="text-4xl md:text-5xl font-bold text-[#171717] mb-4 font-serif tracking-wide"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
+            className="text-4xl md:text-5xl font-bold text-[#171717] mb-4 tracking-wide"
           >
             Clients & Partners
           </h2>
-          <p className="text-lg md:text-xl text-[#444444] italic font-serif mb-6">
+          <p className="text-lg md:text-xl text-[#444444] italic mb-6">
           Where quality meets trusted partnerships
           </p>
           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#DA0037] to-transparent mx-auto"></div>
@@ -148,12 +147,12 @@ const VisionMissionSection = () => {
               >
                 <Sparkles className="w-6 h-6 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-[#171717] mb-4 font-serif tracking-wide">
+              <h3 className="text-2xl font-bold text-[#171717] mb-4 tracking-wide">
               Our Commitment
               </h3>
               <div className="w-16 h-[1px] bg-gradient-to-r from-[#DA0037] to-[#DA0037] mx-auto"></div>
             </div>
-            <p className="text-[#171717]/90 text-lg leading-relaxed font-sans text-center">
+            <p className="text-[#171717]/90 text-lg leading-relaxed text-center">
             At Squad Link, we are honored to serve some of the most prestigious and respected names in the market. Our commitment to quality, honesty, and on-time delivery has earned the trust of renowned brands such as Em Sherif, Patchi, MEA Security, Advanced Car Rental, and many others. These partnerships reflect our dedication to excellence and our ability to deliver premium uniforms that meet the standards of top-tier companies.
             </p>
           </motion.div>
@@ -175,12 +174,12 @@ const VisionMissionSection = () => {
               >
                 <Heart className="w-6 h-6 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-[#171717] mb-4 font-serif tracking-wide">
+              <h3 className="text-2xl font-bold text-[#171717] mb-4 tracking-wide">
                 Our Partners
               </h3>
               <div className="w-16 h-[1px] bg-gradient-to-r from-[#DA0037] to-[#DA0037] mx-auto"></div>
             </div>
-            <p className="text-[#171717]/90 text-lg leading-relaxed font-sans text-center">
+            <p className="text-[#171717]/90 text-lg leading-relaxed text-center">
             We are proud to be trusted by some of the most respected brands in Lebanon and the region. Our commitment to quality, honesty, and timely service has enabled us to build strong, long-lasting partnerships across hospitality, security, retail, and corporate sectors. Each client inspires us to deliver perfection in every detail.
             </p>
           </motion.div>
@@ -238,8 +237,7 @@ const WellnessPhilosophySection = () => {
           className="text-center mb-16"
         >
           <h2 
-            className="text-4xl md:text-5xl font-bold text-[#171717] mb-4 font-serif tracking-wide"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
+            className="text-4xl md:text-5xl font-bold text-[#171717] mb-4 tracking-wide"
           >
             Our Valued Clients Include
           </h2>
@@ -264,7 +262,7 @@ const WellnessPhilosophySection = () => {
               >
                 <item.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
               </motion.div>
-              <h3 className="text-lg md:text-xl font-bold text-[#171717] font-sans tracking-wide">
+              <h3 className="text-lg md:text-xl font-bold text-[#171717] tracking-wide">
                 {item.title}
               </h3>
             </motion.div>
@@ -311,7 +309,8 @@ const CustomersLogosSection = () => {
           className="text-center mb-12 md:mb-16"
         >
           <h2 
-            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#DA0037] via-[#DA0037] to-[#DA0037] mb-4 tracking-tight"
+            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#DA0037] via-[#DA0037] to-[#DA0037] mb-4 tracking-tight leading-normal pb-2"
+            style={{ lineHeight: '1.2' }}
           >
             Trusted by Leading Brands
           </h2>
@@ -551,6 +550,9 @@ const Client = () => {
         </div>
         
         <div className="relative z-10">
+          {/* Customers Logos Section */}
+          <CustomersLogosSection />
+
           {/* Vision & Mission Section */}
           <VisionMissionSection />
 
@@ -576,9 +578,6 @@ const Client = () => {
               <WellnessPhilosophySection />
             </div>
           </div>
-
-          {/* Customers Logos Section */}
-          <CustomersLogosSection />
 
           {/* Meet Our Team Section */}
           {/* <MeetOurTeamSection /> */}
